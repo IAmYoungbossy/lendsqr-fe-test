@@ -1,4 +1,4 @@
-import "./LoginForm.css";
+import "./styles/LoginForm.css";
 import InputFields from "./InputFields";
 import LoginButton from "./LoginButton";
 import LoginInstruction from "./LoginInstruction";
