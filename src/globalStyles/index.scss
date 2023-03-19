@@ -1,4 +1,25 @@
-// This style rule will be applicable to all HTML elements
+@font-face {
+  font-family: "Avanir Next Regular";
+  src: url("../fonts/AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+  font-family: "Avanir Next Bold";
+  src: url("../fonts/AvenirNextLTPro-Bold.otf");
+}
+
+@font-face {
+  font-family: "Avanir Next Light";
+  src: url("../fonts/AvenirNextLTPro-It.otf");
+}
+
+:root {
+  --font-avanir-next-bold: "Avanir Next bold";
+  --font-avanir-next-light: "Avanir Next light";
+  --font-avanir-next-regular: "Avanir Next Regular";
+}
+
+// Reset styled for all Elements
 *,
 *::before,
 *::after {

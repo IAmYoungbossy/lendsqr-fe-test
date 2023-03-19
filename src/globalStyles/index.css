@@ -1,13 +1,25 @@
+@font-face {
+  font-family: "Avanir Next Regular";
+  src: url("../fonts/AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+  font-family: "Avanir Next Bold";
+  src: url("../fonts/AvenirNextLTPro-Bold.otf");
+}
+@font-face {
+  font-family: "Avanir Next Light";
+  src: url("../fonts/AvenirNextLTPro-It.otf");
+}
+:root {
+  --font-avanir-next-bold: "Avanir Next bold";
+  --font-avanir-next-light: "Avanir Next light";
+  --font-avanir-next-regular: "Avanir Next Regular";
+}
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
