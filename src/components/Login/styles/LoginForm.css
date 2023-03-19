@@ -4,6 +4,23 @@
   display: flex;
   max-width: 704px;
 }
+.login-form > div > div:last-of-type {
+  position: relative;
+}
+.login-form > div > div:last-of-type span {
+  top: 18px;
+  right: 17.64px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #39cdcc;
+  line-height: 16px;
+  position: absolute;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: var(--font-avanir-next-regular);
+}
 .login-form > div {
   width: 100%;
   max-width: 447px;

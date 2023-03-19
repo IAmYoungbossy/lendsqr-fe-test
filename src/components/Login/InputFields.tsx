@@ -7,6 +7,7 @@ export default function InputFields() {
         type={loginField}
         placeholder={loginField}
       />
+      {loginField === "Password" && <span>Show</span>}
     </div>
   );
 
