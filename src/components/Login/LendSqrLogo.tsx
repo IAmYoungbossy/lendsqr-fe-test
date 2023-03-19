@@ -1,4 +1,4 @@
-import "./styles/LendsqrLogo.scss";
+import "./styles/LendSqrLogo.css";
 import Logo from "../../assets/login-assets/Group.svg";
 
 export default function LendSqrLogo() {

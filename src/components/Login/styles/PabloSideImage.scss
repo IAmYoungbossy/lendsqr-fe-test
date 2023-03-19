@@ -5,8 +5,8 @@
   justify-content: flex-end;
   background-color: #fcfcfc;
 
-  // Image container
-  & > div {
+  // Pablo sign in image container
+  & > div:last-of-type {
     width: 100%;
     height: 100%;
     max-width: 736px;

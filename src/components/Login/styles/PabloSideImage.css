@@ -5,12 +5,12 @@
   justify-content: flex-end;
   background-color: #fcfcfc;
 }
-.pablo-sign-in > div {
+.pablo-sign-in > div:last-of-type {
   width: 100%;
   height: 100%;
   max-width: 736px;
   margin: 281px 0 281.43px 67px;
 }
-.pablo-sign-in > div img {
+.pablo-sign-in > div:last-of-type img {
   filter: brightness(0.988);
 }/*# sourceMappingURL=PabloSideImage.css.map */
