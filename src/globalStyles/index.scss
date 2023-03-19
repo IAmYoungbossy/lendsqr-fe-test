@@ -1,0 +1,8 @@
+// This style rule will be applicable to all HTML elements
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
