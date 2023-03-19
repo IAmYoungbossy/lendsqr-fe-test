@@ -1,8 +1,16 @@
 .pablo-sign-in {
   width: 100%;
-  max-width: 600px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 
-  img {
+  & > div {
     width: 100%;
+    max-width: 600px;
+
+    img {
+      width: 100%;
+    }
   }
 }

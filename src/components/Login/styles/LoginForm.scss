@@ -1,13 +1,14 @@
 // Login Page form
 .login-form {
   width: 100%;
+  height: 100%;
+  display: flex;
   max-width: 704px;
-  min-height: 100vh;
+  align-items: flex-end;
 
   // Form content wrapper
   & > div {
     width: 100%;
-    margin: auto;
     max-width: 447px;
   }
 
