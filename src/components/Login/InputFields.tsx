@@ -2,7 +2,7 @@ import { loginFields } from "../../constant/textConstant";
 
 export default function InputFields() {
   const displayInputFields = (loginField: string) => (
-    <div>
+    <div key={loginField}>
       <input
         type={loginField}
         placeholder={loginField}
@@ -10,5 +10,5 @@ export default function InputFields() {
     </div>
   );
 
-  return <div>{loginFields.map(displayInputFields)}</div>;
+  return <>{loginFields.map(displayInputFields)}</>;
 }
