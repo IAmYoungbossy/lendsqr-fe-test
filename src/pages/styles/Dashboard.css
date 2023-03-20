@@ -2,4 +2,14 @@
   width: 100%;
   margin: auto;
   max-width: 1440px;
+}
+.dashboard > div {
+  display: flex;
+}
+.dashboard > div > div {
+  width: 100%;
+  display: flex;
+  padding: 60px;
+  max-width: 1157px;
+  background-color: #fbfbfb;
 }/*# sourceMappingURL=Dashboard.css.map */

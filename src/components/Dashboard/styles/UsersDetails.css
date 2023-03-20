@@ -1,0 +1,48 @@
+.users-details {
+  width: 100%;
+}
+.users-details h1 {
+  font-size: 24px;
+  color: #213f7d;
+  font-weight: 600;
+  line-height: 28px;
+  font-style: normal;
+  margin-bottom: 40px;
+  font-family: var(--font-work-sans-regular);
+}
+.users-details > div {
+  gap: 25px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.users-details > div div {
+  flex: 1;
+  max-width: 240px;
+  min-height: 160px;
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 20px 30px 30px;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+}
+.users-details > div div h2 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #545f7d;
+  margin-top: 14px;
+  line-height: 16px;
+  font-style: normal;
+  text-transform: uppercase;
+  font-family: var(--font-work-sans-regular);
+}
+.users-details > div div p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #213f7d;
+  margin-top: 12px;
+  line-height: 28px;
+  font-style: normal;
+  text-transform: uppercase;
+  font-family: var(--font-work-sans-regular);
+}/*# sourceMappingURL=UsersDetails.css.map */

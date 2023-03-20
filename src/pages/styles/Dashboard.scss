@@ -2,4 +2,18 @@
   width: 100%;
   margin: auto;
   max-width: 1440px;
+
+  // Side nav bar and table container
+  & > div {
+    display: flex;
+  }
+
+  // Users details container
+  & > div > div {
+    width: 100%;
+    display: flex;
+    padding: 60px;
+    max-width: 1157px;
+    background-color: #fbfbfb;
+  }
 }

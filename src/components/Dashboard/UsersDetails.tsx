@@ -1,3 +1,4 @@
+import "./styles/UsersDetails.scss";
 import { dashboardUsersDetails as users } from "../../constant/textConstant";
 
 type userType = {
@@ -8,7 +9,7 @@ type userType = {
 
 export default function UsersDetails() {
   return (
-    <div>
+    <div className="users-details">
       <h1>Users</h1>
       <UserDetailsCard />
     </div>
@@ -21,7 +22,7 @@ function UserDetailsCard() {
 
 function card(user: userType) {
   return (
-    <div>
+    <div key={user.tile}>
       <img
         src={user.iconUrl}
         alt={user.tile}
