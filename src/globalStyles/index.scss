@@ -13,9 +13,15 @@
   src: url("../fonts/AvenirNextLTPro-It.otf");
 }
 
+@font-face {
+  font-family: "Work Sans Regular";
+  src: url("../fonts/WorkSans-Regular.ttf");
+}
+
 :root {
   --font-avanir-next-bold: "Avanir Next bold";
   --font-avanir-next-light: "Avanir Next light";
+  --font-work-sans-regular: "Work Sans Regular";
   --font-avanir-next-regular: "Avanir Next Regular";
 }
 

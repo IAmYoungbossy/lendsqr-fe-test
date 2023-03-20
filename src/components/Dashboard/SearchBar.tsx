@@ -7,6 +7,7 @@ export default function SearchBar() {
       <input
         type="search"
         name="search-bar"
+        placeholder="Search for anything"
       />
       <button>
         <img

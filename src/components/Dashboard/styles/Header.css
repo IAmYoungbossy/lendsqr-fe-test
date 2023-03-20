@@ -1,3 +1,14 @@
 header {
   width: 100%;
+}
+header > div:first-child {
+  width: 100%;
+  display: flex;
+  max-width: 713px;
+  align-items: center;
+  justify-content: space-between;
+}
+header > div:first-child > div:first-child {
+  width: 144.8px;
+  position: static;
 }/*# sourceMappingURL=Header.css.map */
