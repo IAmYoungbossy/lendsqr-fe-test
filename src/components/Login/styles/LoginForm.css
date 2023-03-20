@@ -24,6 +24,7 @@
 .login-form > div {
   width: 100%;
   max-width: 447px;
+  position: relative;
   height: -moz-fit-content;
   height: fit-content;
   margin: 220px 157px 284px 100px;
@@ -31,6 +32,19 @@
 .login-form > div > * {
   width: 100%;
   margin-top: 24px;
+}
+.login-form > div > div:first-child {
+  margin: 0;
+  left: 0px;
+  top: -106px;
+  height: 36px;
+  display: none;
+  width: 173.76px;
+  position: absolute;
+  max-width: 173.76px;
+}
+.login-form > div > div:first-child img {
+  width: 100%;
 }
 .login-form > div > p:first-of-type {
   font-size: 20px;
@@ -108,4 +122,21 @@
   font-style: normal;
   letter-spacing: -0.04em;
   font-family: var(--font-avanir-next-bold);
+}
+@media screen and (max-width: 960px) {
+  .login-form > div > div:first-child {
+    display: block;
+  }
+}
+@media screen and (max-width: 960px) {
+  .login-form > div {
+    margin: auto;
+    margin: 220px auto 284px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .login-form {
+    padding: 20px;
+  }
 }/*# sourceMappingURL=LoginForm.css.map */

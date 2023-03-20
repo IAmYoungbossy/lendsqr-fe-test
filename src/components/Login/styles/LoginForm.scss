@@ -29,6 +29,7 @@
   & > div {
     width: 100%;
     max-width: 447px;
+    position: relative;
     height: fit-content;
     margin: 220px 157px 284px 100px;
 
@@ -36,6 +37,22 @@
     & > * {
       width: 100%;
       margin-top: 24px;
+    }
+
+    // LendSqr Logo styles
+    & > div:first-child {
+      margin: 0;
+      left: 0px;
+      top: -106px;
+      height: 36px;
+      display: none;
+      width: 173.76px;
+      position: absolute;
+      max-width: 173.76px;
+
+      img {
+        width: 100%;
+      }
     }
   }
 
@@ -116,5 +133,25 @@
     font-style: normal;
     letter-spacing: -0.04em;
     font-family: var(--font-avanir-next-bold);
+  }
+
+  @media screen and (max-width: 960px) {
+    & > div > div:first-child {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    // Form content wrapper
+    & > div {
+      margin: auto;
+      margin: 220px auto 284px;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .login-form {
+    padding: 20px;
   }
 }

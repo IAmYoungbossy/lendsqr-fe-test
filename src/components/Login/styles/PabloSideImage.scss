@@ -4,6 +4,7 @@
   display: flex;
   max-width: 736px;
   position: relative;
+  padding-right: 69px;
   justify-content: flex-end;
   background-color: #fcfcfc;
 
@@ -14,13 +15,19 @@
     margin: 281px 0 281.43px 67px;
 
     div {
-      height: 338px;
       width: 100%;
+      height: 338px;
       max-width: 600px;
       background-size: cover;
       filter: brightness(0.988);
       background-position: center;
       background-image: url("../../../assets/login-assets/pablo-sign-in.svg");
     }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .pablo-sign-in {
+    display: none;
   }
 }
