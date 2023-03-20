@@ -18,7 +18,13 @@
   src: url("../fonts/WorkSans-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
 :root {
+  --font-roboto-regular: "Roboto Regular";
   --font-avanir-next-bold: "Avanir Next bold";
   --font-avanir-next-light: "Avanir Next light";
   --font-work-sans-regular: "Work Sans Regular";
