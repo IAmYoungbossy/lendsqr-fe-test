@@ -1,6 +1,8 @@
 .pablo-sign-in {
+  width: 100%;
   height: 100%;
   display: flex;
+  max-width: 736px;
   position: relative;
   justify-content: flex-end;
   background-color: #fcfcfc;
@@ -9,11 +11,16 @@
   & > div:last-of-type {
     width: 100%;
     height: 100%;
-    max-width: 736px;
     margin: 281px 0 281.43px 67px;
 
-    img {
+    div {
+      height: 338px;
+      width: 100%;
+      max-width: 600px;
+      background-size: cover;
       filter: brightness(0.988);
+      background-position: center;
+      background-image: url("../../../assets/login-assets/pablo-sign-in.svg");
     }
   }
 }
