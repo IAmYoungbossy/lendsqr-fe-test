@@ -1,7 +1,16 @@
 header {
+  gap: 20px;
   width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 0 43.67px 0 30px;
+  justify-content: space-between;
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
 }
 header > div:first-child {
+  gap: 20px;
   width: 100%;
   display: flex;
   max-width: 713px;
@@ -9,6 +18,8 @@ header > div:first-child {
   justify-content: space-between;
 }
 header > div:first-child > div:first-child {
-  width: 144.8px;
+  height: 30px;
   position: static;
+  max-width: 144.8px;
+  min-width: 144.8px;
 }/*# sourceMappingURL=Header.css.map */

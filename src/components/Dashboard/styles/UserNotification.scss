@@ -1,0 +1,49 @@
+.user-notification {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+
+  // Docs p tag
+  & > p:first-of-type {
+    font-size: 16px;
+    font-weight: 400;
+    color: #213f7d;
+    line-height: 19px;
+    font-style: normal;
+    margin-right: 50.16px;
+    text-decoration-line: underline;
+    font-family: var(--font-roboto-regular);
+  }
+
+  // Notification icon
+  & > img:first-of-type {
+    width: 19.67px;
+    height: 22.74px;
+    margin-right: 33.16px;
+  }
+
+  // User Avatar
+  & > img:nth-child(3) {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+
+  // Name of user
+  & > p:last-of-type {
+    font-size: 16px;
+    font-weight: 500;
+    color: #213f7d;
+    line-height: 19px;
+    font-style: normal;
+    margin-right: 10.33px;
+    font-family: var(--font-work-sans-regular);
+  }
+
+  // Chevron down icon
+  & > img:last-of-type {
+    width: 7.34px;
+    height: 4.15px;
+  }
+}

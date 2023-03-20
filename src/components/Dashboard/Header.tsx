@@ -1,6 +1,7 @@
 import "./styles/Header.css";
-import LendSqrLogo from "../Login/LendSqrLogo";
 import SearchBar from "./SearchBar";
+import LendSqrLogo from "../Login/LendSqrLogo";
+import UserNotification from "./UserNotification";
 
 export default function Header() {
   return (
@@ -9,6 +10,7 @@ export default function Header() {
         <LendSqrLogo />
         <SearchBar />
       </div>
+      <UserNotification />
     </header>
   );
 }
