@@ -1,0 +1,17 @@
+.search-bar {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+
+  input {
+    width: 100%;
+    height: 40px;
+    max-width: 344px;
+  }
+
+  button {
+    width: 56px;
+    height: 40px;
+  }
+}
