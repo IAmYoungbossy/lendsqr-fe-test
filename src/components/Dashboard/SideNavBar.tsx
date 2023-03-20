@@ -1,18 +1,18 @@
 import "./styles/SideNavBar.css";
 import { sideNavBar } from "../../constant/textConstant";
 
-interface ListProps {
+type ListType = {
   name: string;
   icon: string;
-}
+};
 
-interface CategoryProps {
+type CategoryType = {
   name: string;
   lists: {
     name: string;
     icon: string;
   }[];
-}
+};
 
 export default function SideNavBar() {
   return (
@@ -58,7 +58,7 @@ function Categories() {
   return <div>{sideNavBar.categories.map(category)}</div>;
 }
 
-function category(category: CategoryProps) {
+function category(category: CategoryType) {
   return (
     <div key={category.name}>
       <h4>{category.name}</h4>
@@ -67,7 +67,7 @@ function category(category: CategoryProps) {
   );
 }
 
-function categoryList(list: ListProps) {
+function categoryList(list: ListType) {
   return (
     <li key={list.name}>
       <img

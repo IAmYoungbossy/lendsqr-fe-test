@@ -1,3 +1,4 @@
+// Side Navigation Icons
 import LoanMoney from "../assets/dashboard-assets/side-bar-icons/loan-money-icon.png";
 import Savings from "../assets/dashboard-assets/side-bar-icons/savings-piggy-bank.png";
 import Karma from "../assets/dashboard-assets/side-bar-icons/karma-user-times-icon.png";
@@ -21,6 +22,12 @@ import SavingsProduct from "../assets/dashboard-assets/side-bar-icons/savings-pr
 import FeesAndCharges from "../assets/dashboard-assets/side-bar-icons/fees-and-charges-coins-icon.png";
 import ServiceAccount from "../assets/dashboard-assets/side-bar-icons/service-acc-user-config-icon.png";
 import FeesAndPricing from "../assets/dashboard-assets/side-bar-icons/fees-and-pricing-badge-percent-icon.png";
+
+// Users Details Card Icons
+import Users from "../assets/dashboard-assets/users-details-icons/users-icon.png";
+import ActiveUsers from "../assets/dashboard-assets/users-details-icons/active-users-icon.png";
+import UsersWithLoan from "../assets/dashboard-assets/users-details-icons/users-with-loan-icon.png";
+import UsersWithSavings from "../assets/dashboard-assets/users-details-icons/users-with-savings-icon.png";
 
 export const loginFields = ["Email", "Password"];
 
@@ -69,3 +76,10 @@ export const sideNavBar = {
     },
   ],
 };
+
+export const dashboardUsersDetails = [
+  { iconUrl: Users, tile: "Users", number: "2,453" },
+  { iconUrl: ActiveUsers, tile: "Active Users", number: "2,453" },
+  { iconUrl: UsersWithLoan, tile: "Users With Loans", number: "12,453" },
+  { iconUrl: UsersWithSavings, tile: "Users With Savings", number: "102,453" },
+];
