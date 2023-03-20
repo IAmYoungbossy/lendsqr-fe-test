@@ -1,3 +1,5 @@
+import "./styles/Dashboard.css";
+
 export default function DashboardPage() {
-  return <div>Dashboard Page</div>;
+  return <div className="dashboard">Dashboard Page</div>;
 }
