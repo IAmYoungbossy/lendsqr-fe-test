@@ -1,3 +1,4 @@
+import "./styles/SideNavBar.css";
 import { sideNavBar } from "../../constant/textConstant";
 
 interface ListProps {
@@ -46,20 +47,20 @@ function Dashboard() {
     <div>
       <img
         src={sideNavBar.dashboard.icon}
-        alt={sideNavBar.switch.name}
+        alt={sideNavBar.dashboard.name}
       />
-      <p>{sideNavBar.switch.name}</p>
+      <p>{sideNavBar.dashboard.name}</p>
     </div>
   );
 }
 
 function Categories() {
-  return <>{sideNavBar.categories.map(Category)}</>;
+  return <div>{sideNavBar.categories.map(category)}</div>;
 }
 
-function Category(category: CategoryProps) {
+function category(category: CategoryProps) {
   return (
-    <div>
+    <div key={category.name}>
       <h4>{category.name}</h4>
       <ul>{category.lists.map(categoryList)}</ul>
     </div>
@@ -68,12 +69,12 @@ function Category(category: CategoryProps) {
 
 function categoryList(list: ListProps) {
   return (
-    <li>
+    <li key={list.name}>
       <img
         src={list.icon}
         alt={list.name}
       />
-      {list.name}
+      <span>{list.name}</span>
     </li>
   );
 }

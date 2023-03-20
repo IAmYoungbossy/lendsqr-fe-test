@@ -1,0 +1,85 @@
+nav {
+  width: 100%;
+  max-width: 283px;
+  min-height: 1384px;
+  background: #ffffff;
+  padding: 39px 47px 0 0;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+}
+nav > div > div:first-child {
+  width: 100%;
+  height: 19px;
+  display: flex;
+  max-width: 206px;
+  margin-left: 30px;
+  align-items: center;
+  margin-bottom: 52px;
+  justify-content: space-between;
+}
+nav > div > div:first-child h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #213f7d;
+  line-height: 19px;
+  font-style: normal;
+  font-family: var(--font-work-sans-regular);
+}
+nav > div > div:nth-child(2) {
+  width: 100%;
+  height: 19px;
+  display: flex;
+  max-width: 110px;
+  margin-left: 30px;
+  margin-bottom: 41px;
+  align-items: center;
+  justify-content: space-between;
+}
+nav > div > div:nth-child(2) p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #213f7d;
+  line-height: 19px;
+  font-style: normal;
+  font-family: var(--font-work-sans-regular);
+}
+nav > div > div:last-child > div h4 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #545f7d;
+  line-height: 14px;
+  margin-left: 30px;
+  font-style: normal;
+  margin-bottom: 20px;
+  font-family: var(--font-work-sans-regular);
+}
+nav > div > div:last-child ul > li {
+  gap: 10px;
+  display: flex;
+  font-size: 16px;
+  list-style: none;
+  font-weight: 400;
+  color: #213f7d;
+  padding-left: 30px;
+  line-height: 19px;
+  font-style: normal;
+  margin-bottom: 31px;
+  align-items: center;
+  font-family: var(--font-work-sans-regular);
+}
+nav > div > div:last-child > div:first-child > ul > li:first-child {
+  width: 283px;
+  height: 40px;
+  padding-left: 30px;
+  margin-bottom: 20px;
+  background: #f3fcfc;
+  background: linear-gradient(to right, #39cdcc 1%, #f3fcfc 1%);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  font-style: normal;
+  font-family: var(--font-work-sans-regular);
+}
+nav > div > div:last-child > div:first-child > ul > li:first-child span {
+  opacity: 1;
+  color: #213f7d;
+}/*# sourceMappingURL=SideNavBar.css.map */
