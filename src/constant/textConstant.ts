@@ -8,7 +8,7 @@ import LoanRequest from "../assets/dashboard-assets/side-bar-icons/loan-request-
 import UserFriends from "../assets/dashboard-assets/side-bar-icons/user-friends-icon.png";
 import LoanProduct from "../assets/dashboard-assets/side-bar-icons/loan-product-icon.png";
 import Services from "../assets/dashboard-assets/side-bar-icons/services-galaxy-icon.png";
-import Guarantor from "../assets/dashboard-assets/side-bar-icons/gaurantor-users-icon.png";
+import Guarantor from "../assets/dashboard-assets/side-bar-icons/guarantor-users-icon.png";
 import Reports from "../assets/dashboard-assets/side-bar-icons/reports-chart-bar-icon.png";
 import Organisation from "../assets/dashboard-assets/side-bar-icons/org-briefcase-icon.png";
 import Waitlist from "../assets/dashboard-assets/side-bar-icons/waitlist-user-check-icon.png";
@@ -18,7 +18,7 @@ import SwitchExpand from "../assets/dashboard-assets/side-bar-icons/switch-chevr
 import Preferrences from "../assets/dashboard-assets/side-bar-icons/preferrences-sliders-icon.png";
 import AuditLogs from "../assets/dashboard-assets/side-bar-icons/audit-logs-clipboard-list-icon.png";
 import SavingsProduct from "../assets/dashboard-assets/side-bar-icons/savings-product-bank-icon.png";
-import FeesAndCharges from "../assets/dashboard-assets/side-bar-icons/fees-and-charges-coin-icon.png";
+import FeesAndCharges from "../assets/dashboard-assets/side-bar-icons/fees-and-charges-coins-icon.png";
 import ServiceAccount from "../assets/dashboard-assets/side-bar-icons/service-acc-user-config-icon.png";
 import FeesAndPricing from "../assets/dashboard-assets/side-bar-icons/fees-and-pricing-badge-percent-icon.png";
 
@@ -31,8 +31,8 @@ export const sideNavBar = {
     expand: SwitchExpand,
   },
   dashboard: { name: "Dashboard", icon: Dasboard },
-  categories: {
-    Customers: {
+  categories: [
+    {
       name: "Customers",
       lists: [
         { name: "Users", icon: UserFriends },
@@ -45,7 +45,7 @@ export const sideNavBar = {
         { name: "Karma", icon: Karma },
       ],
     },
-    Businesses: {
+    {
       name: "Businesses",
       lists: [
         { name: "Organisation", icon: Organisation },
@@ -59,7 +59,7 @@ export const sideNavBar = {
         { name: "Reports", icon: Reports },
       ],
     },
-    Settings: {
+    {
       name: "Settings",
       lists: [
         { name: "Preferrences", icon: Preferrences },
@@ -67,5 +67,5 @@ export const sideNavBar = {
         { name: "Audit Logs", icon: AuditLogs },
       ],
     },
-  },
+  ],
 };
