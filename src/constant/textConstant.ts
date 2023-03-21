@@ -29,6 +29,9 @@ import ActiveUsers from "../assets/dashboard-assets/users-details-icons/active-u
 import UsersWithLoan from "../assets/dashboard-assets/users-details-icons/users-with-loan-icon.png";
 import UsersWithSavings from "../assets/dashboard-assets/users-details-icons/users-with-savings-icon.png";
 
+// Table Filter Icon
+import FilterIcon from "../assets/dashboard-assets/table-icons/filter-results-button-icon.png";
+
 export const loginFields = ["Email", "Password"];
 
 export const sideNavBar = {
@@ -83,3 +86,15 @@ export const dashboardUsersDetails = [
   { iconUrl: UsersWithLoan, tile: "Users With Loans", number: "12,453" },
   { iconUrl: UsersWithSavings, tile: "Users With Savings", number: "102,453" },
 ];
+
+export const tableText = {
+  iconUrl: FilterIcon,
+  header: [
+    "Organization",
+    "Username",
+    "Email",
+    "Phone Number",
+    "Date Joined",
+    "Status",
+  ],
+};
