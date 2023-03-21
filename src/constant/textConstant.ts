@@ -98,3 +98,11 @@ export const tableText = {
     "Status",
   ],
 };
+
+export const filterInputFields = [
+  { label: "Organization", placeholder: "Select", type: "select" },
+  { label: "Username", placeholder: "User", type: "username" },
+  { label: "Email", placeholder: "Email", type: "email" },
+  { label: "Phone Number", placeholder: "Phone Number", type: "tel" },
+  { label: "Status", placeholder: "Select", type: "select" },
+];
