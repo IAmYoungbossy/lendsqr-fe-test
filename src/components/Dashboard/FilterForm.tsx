@@ -5,7 +5,7 @@ export default function FilterForm() {
   return (
     <form className="filter-form">
       {filterInputFields.map((inputField) => (
-        <div>
+        <div key={inputField.label}>
           <label htmlFor={inputField.label}>{inputField.label}</label>
           <input
             id={inputField.label}

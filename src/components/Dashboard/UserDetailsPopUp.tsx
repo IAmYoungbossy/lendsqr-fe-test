@@ -1,10 +1,11 @@
+import "./styles/UserDetailsPopUp.css";
 import { userPopUp } from "../../constant/textConstant";
 
 export default function UserDetailsPopUp() {
   return (
-    <div>
+    <div className="user-details-pop-up">
       {userPopUp.map((item) => (
-        <button>
+        <button key={item.name}>
           <img
             src={item.icon}
             alt={item.name}

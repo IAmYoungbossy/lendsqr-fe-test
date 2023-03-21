@@ -1,0 +1,37 @@
+.user-details-pop-up {
+  top: 9px;
+  right: 20px;
+  width: 100%;
+  max-width: 180px;
+  min-height: 130px;
+  position: absolute;
+  padding: 23.14px 21.44px 22px;
+
+  border-radius: 4px;
+  background: #ffffff;
+  border: 1px solid rgba(84, 95, 125, 0.04);
+  box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.009);
+
+  button {
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    background-color: transparent;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #545f7d;
+    line-height: 16px;
+    font-style: normal;
+    font-family: var(--font-work-sans-regular);
+
+    gap: 8.46px;
+    display: flex;
+    align-items: center;
+  }
+
+  & > button:first-child {
+    margin-top: 0;
+  }
+}

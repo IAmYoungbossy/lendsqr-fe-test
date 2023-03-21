@@ -2,6 +2,7 @@ import "./styles/Table.css";
 import FilterForm from "./FilterForm";
 import { tableText } from "../../constant/textConstant";
 import ThreeDots from "../../assets/dashboard-assets/table-icons/3dots-details-icon.png";
+import UserDetailsPopUp from "./UserDetailsPopUp";
 
 export default function Table() {
   // Table Body
@@ -59,6 +60,7 @@ export function ContactRow() {
             alt="Details"
           />
         </div>
+        {/* <UserDetailsPopUp /> */}
       </td>
     </tr>
   );
