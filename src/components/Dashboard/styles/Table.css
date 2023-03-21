@@ -1,0 +1,56 @@
+.table-container {
+  margin-top: 40px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 30px 38.33px 0 30px;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+}
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-container th {
+  font-size: 12px;
+  font-weight: 600;
+  color: #545f7d;
+  line-height: 14px;
+  font-style: normal;
+  text-transform: uppercase;
+  font-family: var(--font-work-sans-regular);
+}
+.table-container th img {
+  width: 15px;
+  height: 15px;
+}
+.table-container th div {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+.table-container td {
+  height: 17px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #545f7d;
+  line-height: 17px;
+  font-style: normal;
+  padding: 20px 0 19px;
+  font-family: var(--font-work-sans-regular);
+  border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+}
+.table-container tr > td:last-child > div {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+}
+.table-container tr > td:last-child > div img {
+  top: -2px;
+  right: -6px;
+  position: absolute;
+}
+.table-container tbody > tr:last-child > td {
+  border: none;
+  padding-bottom: 37.8px;
+}/*# sourceMappingURL=Table.css.map */
