@@ -32,6 +32,11 @@ import UsersWithSavings from "../assets/dashboard-assets/users-details-icons/use
 // Table Filter Icon
 import FilterIcon from "../assets/dashboard-assets/table-icons/filter-results-button-icon.png";
 
+// View User Details Icons
+import ViewIcon from "../assets/dashboard-assets/user-details-pop-up/view-icon.png";
+import Activate from "../assets/dashboard-assets/user-details-pop-up/activate-icon.png";
+import Blacklist from "../assets/dashboard-assets/user-details-pop-up/blacklist-icon.png";
+
 export const loginFields = ["Email", "Password"];
 
 export const sideNavBar = {
@@ -105,4 +110,10 @@ export const filterInputFields = [
   { label: "Email", placeholder: "Email", type: "email" },
   { label: "Phone Number", placeholder: "Phone Number", type: "tel" },
   { label: "Status", placeholder: "Select", type: "select" },
+];
+
+export const userPopUp = [
+  { name: "View Details", icon: ViewIcon },
+  { name: "Blacklist User", icon: Blacklist },
+  { name: "Activate User", icon: Activate },
 ];
