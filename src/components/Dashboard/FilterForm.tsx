@@ -1,8 +1,9 @@
+import "./styles/FilterForm.css";
 import { filterInputFields } from "../../constant/textConstant";
 
 export default function FilterForm() {
   return (
-    <form>
+    <form className="filter-form">
       {filterInputFields.map((inputField) => (
         <div>
           <label htmlFor={inputField.label}>{inputField.label}</label>

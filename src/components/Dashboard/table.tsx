@@ -1,4 +1,5 @@
 import "./styles/Table.css";
+import FilterForm from "./FilterForm";
 import { tableText } from "../../constant/textConstant";
 import ThreeDots from "../../assets/dashboard-assets/table-icons/3dots-details-icon.png";
 
@@ -27,6 +28,7 @@ export default function Table() {
         </thead>
         <tbody>{array.map(tableData)}</tbody>
       </table>
+      <FilterForm />
     </div>
   );
 }

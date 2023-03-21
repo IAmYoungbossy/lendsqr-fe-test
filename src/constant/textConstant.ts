@@ -101,7 +101,7 @@ export const tableText = {
 
 export const filterInputFields = [
   { label: "Organization", placeholder: "Select", type: "select" },
-  { label: "Username", placeholder: "User", type: "username" },
+  { label: "Username", placeholder: "User", type: "name" },
   { label: "Email", placeholder: "Email", type: "email" },
   { label: "Phone Number", placeholder: "Phone Number", type: "tel" },
   { label: "Status", placeholder: "Select", type: "select" },

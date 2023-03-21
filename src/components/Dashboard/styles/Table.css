@@ -1,5 +1,6 @@
 .table-container {
   margin-top: 40px;
+  position: relative;
   border-radius: 4px;
   background-color: #ffffff;
   padding: 30px 38.33px 0 30px;
