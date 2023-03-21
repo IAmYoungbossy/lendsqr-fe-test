@@ -11,8 +11,8 @@ export default function DashboardPage() {
       <div>
         <SideNavBar />
         <div>
-          <UsersDetails />
-          <Table />
+          {/* <UsersDetails />
+          <Table /> */}
         </div>
       </div>
     </div>
