@@ -1,0 +1,69 @@
+.nav-panel {
+  margin-top: 65px;
+
+  button {
+    background-color: transparent;
+  }
+
+  & > button {
+    gap: 14.41px;
+    border: none;
+    display: flex;
+    outline: none;
+    align-items: center;
+    margin-bottom: 32px;
+
+    font-size: 16px;
+    font-weight: 400;
+    color: #545f7d;
+    line-height: 19px;
+    font-style: normal;
+    font-family: var(--font-work-sans-regular);
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #213f7d;
+    line-height: 28px;
+    font-style: normal;
+    font-family: var(--font-work-sans-regular);
+  }
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & > div:last-of-type > div:last-child {
+    gap: 20px;
+    display: flex;
+
+    button {
+      height: 40px;
+      width: 170px;
+      min-height: 40px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 16px;
+      border-radius: 8px;
+      font-style: normal;
+      text-align: center;
+      padding: 12px 0 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-family: var(--font-work-sans-regular);
+    }
+
+    & > button:first-child {
+      color: #e4033b;
+      border: 1px solid #e4033b;
+    }
+
+    & > button:last-child {
+      color: #39cdcc;
+      border: 1px solid #39cdcc;
+    }
+  }
+}

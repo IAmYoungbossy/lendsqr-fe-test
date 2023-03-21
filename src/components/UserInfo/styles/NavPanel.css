@@ -1,0 +1,60 @@
+.nav-panel {
+  margin-top: 65px;
+}
+.nav-panel button {
+  background-color: transparent;
+}
+.nav-panel > button {
+  gap: 14.41px;
+  border: none;
+  display: flex;
+  outline: none;
+  align-items: center;
+  margin-bottom: 32px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #545f7d;
+  line-height: 19px;
+  font-style: normal;
+  font-family: var(--font-work-sans-regular);
+}
+.nav-panel h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #213f7d;
+  line-height: 28px;
+  font-style: normal;
+  font-family: var(--font-work-sans-regular);
+}
+.nav-panel > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-panel > div:last-of-type > div:last-child {
+  gap: 20px;
+  display: flex;
+}
+.nav-panel > div:last-of-type > div:last-child button {
+  height: 40px;
+  width: 170px;
+  min-height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  border-radius: 8px;
+  font-style: normal;
+  text-align: center;
+  padding: 12px 0 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: var(--font-work-sans-regular);
+}
+.nav-panel > div:last-of-type > div:last-child > button:first-child {
+  color: #e4033b;
+  border: 1px solid #e4033b;
+}
+.nav-panel > div:last-of-type > div:last-child > button:last-child {
+  color: #39cdcc;
+  border: 1px solid #39cdcc;
+}/*# sourceMappingURL=NavPanel.css.map */

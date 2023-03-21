@@ -1,8 +1,9 @@
+import "./styles/NavPanel.css";
 import BackArrow from "../../assets/dashboard-assets/details-page-icon/back-arrow-icon.png";
 
 export default function NavPanel() {
   return (
-    <div>
+    <div className="nav-panel">
       <button>
         <img
           src={BackArrow}
