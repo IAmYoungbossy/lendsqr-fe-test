@@ -18,6 +18,7 @@ export default function Table() {
   const tableData = (user: UserDataType) => (
     <ContactRow
       key={user.id}
+      userObject={user}
       org={user.orgName}
       email={user.email}
       phone={user.phoneNumber}
@@ -58,32 +59,32 @@ interface IContactRow {
   phone: string;
   username: string;
   dateJoined: string;
+  userObject: UserDataType;
 }
 
 export function ContactRow({
   org,
-  username,
   email,
   phone,
+  username,
+  userObject,
   dateJoined,
 }: IContactRow) {
+  const tableData = [
+    org,
+    username,
+    email,
+    phone,
+    dateJoined,
+  ];
+
   return (
-    <tr>
-      <td>
-        <span>{org}</span>
-      </td>
-      <td>
-        <span>{username}</span>
-      </td>
-      <td>
-        <span>{email}</span>
-      </td>
-      <td>
-        <span>{phone}</span>
-      </td>
-      <td>
-        <span>{dateJoined}</span>
-      </td>
+    <tr onClick={() => console.log(userObject)}>
+      {tableData.map((td) => (
+        <td key={td}>
+          <span>{td}</span>
+        </td>
+      ))}
       <td>
         <div>
           <div>Active</div>

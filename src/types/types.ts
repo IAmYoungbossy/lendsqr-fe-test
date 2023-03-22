@@ -14,11 +14,11 @@ type GuarantorType = {
 
 type ProfileType = {
   bvn: string;
-  avatar: string;
   gender: string;
+  avatar: string;
   address: string;
-  currency: string;
   lastName: string;
+  currency: string;
   firstName: string;
   phoneNumber: string;
 };
@@ -43,8 +43,8 @@ export type UserDataType = {
   profile: ProfileType;
   socials: SocialsType;
   accountNumber: string;
-  accountBalance: string;
   lastActiveDate: string;
+  accountBalance: string;
   education: EducationType;
   guarantor: GuarantorType;
 };
