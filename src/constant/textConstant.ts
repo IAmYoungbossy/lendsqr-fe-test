@@ -117,3 +117,12 @@ export const userPopUp = [
   { name: "Blacklist User", icon: Blacklist },
   { name: "Activate User", icon: Activate },
 ];
+
+export const views = [
+  "General Details",
+  "Document",
+  "Bank Details",
+  "Loans",
+  "Savings",
+  "App And System",
+];
