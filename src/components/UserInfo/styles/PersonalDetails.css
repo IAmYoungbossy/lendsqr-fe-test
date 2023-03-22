@@ -1,0 +1,48 @@
+.personal-details {
+  margin-top: 30px;
+  font-style: normal;
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 30px 30px 46px;
+  font-family: var(--font-work-sans-regular);
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+}
+.personal-details h2 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  color: rgba(33, 63, 125, 0.8784313725);
+}
+.personal-details h4 {
+  font-size: 12px;
+  color: #545f7d;
+  font-weight: 500;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+.personal-details p {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(84, 95, 125, 0.8588235294);
+  line-height: 19px;
+}
+.personal-details > div:nth-child(-n+4) > div {
+  display: grid;
+  gap: 30px 0;
+  margin-top: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(194px, 1fr));
+}
+.personal-details > div:nth-child(2) > div {
+  grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+}
+.personal-details > div {
+  margin-top: 30px;
+}
+.personal-details > div:last-child {
+  display: grid;
+  gap: 30px 0px;
+  margin-top: 79px;
+  grid-template-columns: repeat(auto-fill, minmax(194px, 1fr));
+}/*# sourceMappingURL=PersonalDetails.css.map */

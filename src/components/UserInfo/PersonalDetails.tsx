@@ -1,6 +1,8 @@
+import "./styles/PersonalDetails.css";
+
 export default function PersonalDetails() {
   return (
-    <div>
+    <div className="personal-details">
       <PersonalInfo />
       <EducationAndEmployment />
       <Socials />

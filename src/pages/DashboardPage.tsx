@@ -3,6 +3,7 @@ import "./styles/Dashboard.css";
 import Header from "../components/Dashboard/Header";
 import NavPanel from "../components/UserInfo/NavPanel";
 import SideNavBar from "../components/Dashboard/SideNavBar";
+import PersonalDetails from "../components/UserInfo/PersonalDetails";
 import AccountInfoCard from "../components/UserInfo/AccountInfoCard";
 // import UsersDetails from "../components/Dashboard/UsersDetails";
 
@@ -17,6 +18,7 @@ export default function DashboardPage() {
           <Table /> */}
           <NavPanel />
           <AccountInfoCard />
+          <PersonalDetails />
         </div>
       </div>
     </div>

@@ -1,0 +1,55 @@
+.personal-details {
+  margin-top: 30px;
+  font-style: normal;
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 30px 30px 46px;
+  font-family: var(--font-work-sans-regular);
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    color: #213f7de0;
+  }
+
+  h4 {
+    font-size: 12px;
+    color: #545f7d;
+    font-weight: 500;
+    line-height: 14px;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #545f7ddb;
+    line-height: 19px;
+  }
+
+  & > div:nth-child(-n + 4) > div {
+    display: grid;
+    gap: 30px 0;
+    margin-top: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(194px, 1fr));
+  }
+
+  & > div:nth-child(2) > div {
+    grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+  }
+
+  & > div {
+    margin-top: 30px;
+  }
+
+  & > div:last-child {
+    display: grid;
+    gap: 30px 0px;
+    margin-top: 79px;
+    grid-template-columns: repeat(auto-fill, minmax(194px, 1fr));
+  }
+}
