@@ -87,9 +87,21 @@ export const sideNavBar = {
 
 export const dashboardUsersDetails = [
   { iconUrl: Users, tile: "Users", number: "2,453" },
-  { iconUrl: ActiveUsers, tile: "Active Users", number: "2,453" },
-  { iconUrl: UsersWithLoan, tile: "Users With Loans", number: "12,453" },
-  { iconUrl: UsersWithSavings, tile: "Users With Savings", number: "102,453" },
+  {
+    iconUrl: ActiveUsers,
+    tile: "Active Users",
+    number: "2,453",
+  },
+  {
+    iconUrl: UsersWithLoan,
+    tile: "Users With Loans",
+    number: "12,453",
+  },
+  {
+    iconUrl: UsersWithSavings,
+    tile: "Users With Savings",
+    number: "102,453",
+  },
 ];
 
 export const tableText = {
@@ -105,11 +117,23 @@ export const tableText = {
 };
 
 export const filterInputFields = [
-  { label: "Organization", placeholder: "Select", type: "select" },
+  {
+    label: "Organization",
+    placeholder: "Select",
+    type: "select",
+  },
   { label: "Username", placeholder: "User", type: "name" },
   { label: "Email", placeholder: "Email", type: "email" },
-  { label: "Phone Number", placeholder: "Phone Number", type: "tel" },
-  { label: "Status", placeholder: "Select", type: "select" },
+  {
+    label: "Phone Number",
+    placeholder: "Phone Number",
+    type: "tel",
+  },
+  {
+    label: "Status",
+    placeholder: "Select",
+    type: "select",
+  },
 ];
 
 export const userPopUp = [

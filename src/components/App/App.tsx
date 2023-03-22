@@ -4,10 +4,12 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+import DashboardLayout, {
+  HomeLayout,
+} from "../../Layouts/Layouts";
 import UserPage from "../../pages/UserPage";
 import LoginPage from "../../pages/LoginPage";
 import Dashboard from "../../pages/Dashboard";
-import DashboardLayout, { HomeLayout } from "../../Layouts/Layouts";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

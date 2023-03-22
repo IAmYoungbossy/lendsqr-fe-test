@@ -1,13 +1,18 @@
 import "./styles/Table.css";
+import {
+  AppContext,
+  AppContextProps,
+} from "../../context/AppContext";
 import { useContext } from "react";
 import FilterForm from "./FilterForm";
 import { UserDataType } from "../../types/types";
 import { tableText } from "../../constant/textConstant";
-import { AppContext, AppContextProps } from "../../context/AppContext";
 import ThreeDots from "../../assets/dashboard-assets/table-icons/3dots-details-icon.png";
 
 export default function Table() {
-  const { state } = useContext(AppContext) as AppContextProps;
+  const { state } = useContext(
+    AppContext
+  ) as AppContextProps;
 
   // Table Body
   const tableData = (user: UserDataType) => (

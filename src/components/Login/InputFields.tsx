@@ -5,7 +5,8 @@ export default function InputFields() {
   const [showPassword, setShowPassword] = useState(false);
 
   // Define function to handle password visibility toggle
-  const handlePasswordVisibility = () => setShowPassword(!showPassword);
+  const handlePasswordVisibility = () =>
+    setShowPassword(!showPassword);
 
   // Define function to display input fields
   const displayInputFields = (loginField: string) => (

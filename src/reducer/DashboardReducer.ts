@@ -7,7 +7,10 @@ export const initialState = {
 };
 
 // Dashboard Reducer
-export const AppReducer = (state: AppStateType, action: IActionType) => {
+export const AppReducer = (
+  state: AppStateType,
+  action: IActionType
+) => {
   switch (action.type) {
     case ACTION_TYPES.ALL_USERS_DATA:
       return { ...state, allUsersData: action.payload };
