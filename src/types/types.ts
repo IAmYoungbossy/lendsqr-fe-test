@@ -48,3 +48,7 @@ export type UserDataType = {
   education: EducationType;
   guarantor: GuarantorType;
 };
+
+export interface AppDataProviderProps {
+  children: React.ReactNode;
+}
