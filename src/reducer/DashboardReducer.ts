@@ -1,33 +1,16 @@
-import { UserDataType } from "../types/types";
-
-export const ACTION_TYPES = {
-  ALL_USERS_DATA: "ALL USERS DATA",
-};
-
-export type DbInitialStateType = {
-  allUsersData: UserDataType[] | [];
-  userDetails: UserDataType | {};
-};
+import { ACTION_TYPES } from "../constant/objectConstant";
+import { AppStateType, IActionType } from "../types/types";
 
 // Dashboard Initial State
-export const DbInitialState = {
-  userDetails: {},
+export const initialState = {
   allUsersData: [],
 };
 
-export type ActionPayloadTypes = {
-  type: string;
-  payload: UserDataType[] | UserDataType;
-};
-
 // Dashboard Reducer
-export const DbReducer = (
-  state: DbInitialStateType,
-  action: ActionPayloadTypes
-) => {
+export const AppReducer = (state: AppStateType, action: IActionType) => {
   switch (action.type) {
     case ACTION_TYPES.ALL_USERS_DATA:
-      return { ...state };
+      return { ...state, allUsersData: action.payload };
     default:
       return state;
   }

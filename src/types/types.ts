@@ -52,3 +52,12 @@ export type UserDataType = {
 export interface AppDataProviderProps {
   children: React.ReactNode;
 }
+
+export interface AppStateType {
+  allUsersData: [] | UserDataType[];
+}
+
+export interface IActionType {
+  type: string;
+  payload: UserDataType[];
+}

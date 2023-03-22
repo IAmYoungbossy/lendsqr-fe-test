@@ -1,21 +1,20 @@
 import {
-  DbReducer,
-  DbInitialState,
-  ActionPayloadTypes,
-  DbInitialStateType,
-} from "../reducer/DashboardReducer";
+  IActionType,
+  AppStateType,
+  AppDataProviderProps,
+} from "../types/types";
 import { createContext, useReducer } from "react";
-import { AppDataProviderProps } from "../types/types";
+import { AppReducer, initialState } from "../reducer/DashboardReducer";
 
-export type DbContextProps = {
-  state: DbInitialStateType;
-  dispatch: React.Dispatch<ActionPayloadTypes>;
+export type AppContextProps = {
+  state: AppStateType;
+  dispatch: React.Dispatch<IActionType>;
 };
 
-export const AppContext = createContext<DbContextProps | null>(null);
+export const AppContext = createContext<AppContextProps | null>(null);
 
 const AppDataProvider = ({ children }: AppDataProviderProps) => {
-  const [state, dispatch] = useReducer(DbReducer, DbInitialState);
+  const [state, dispatch] = useReducer(AppReducer, initialState);
   const value = { state, dispatch };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

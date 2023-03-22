@@ -1,0 +1,3 @@
+export const ACTION_TYPES = {
+  ALL_USERS_DATA: "ALL USERS DATA",
+};

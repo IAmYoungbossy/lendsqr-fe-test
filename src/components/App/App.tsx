@@ -1,13 +1,45 @@
-// import LoginPage from "../../pages/LoginPage";
-import DashboardPage from "../../pages/DashboardPage";
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
+import UserPage from "../../pages/UserPage";
+import LoginPage from "../../pages/LoginPage";
+import Dashboard from "../../pages/Dashboard";
+import DashboardLayout, { HomeLayout } from "../../Layouts/Layouts";
 
-function App() {
-  return (
-    <div className="App">
-      {/* <LoginPage /> */}
-      <DashboardPage />
-    </div>
-  );
-}
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route
+      path="/"
+      element={<HomeLayout />}
+    >
+      <Route
+        index
+        element={<LoginPage />}
+      />
+      <Route
+        path="dashboard"
+        element={<DashboardLayout />}
+      >
+        <Route
+          index
+          element={<Dashboard />}
+        />
+        <Route
+          path="user/:id"
+          element={<UserPage />}
+        />
+      </Route>
+    </Route>
+  )
+);
+
+const App = () => (
+  <div className="App">
+    <RouterProvider router={router} />
+  </div>
+);
 
 export default App;

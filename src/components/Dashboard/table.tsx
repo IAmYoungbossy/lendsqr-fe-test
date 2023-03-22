@@ -1,12 +1,25 @@
 import "./styles/Table.css";
+import { useContext } from "react";
 import FilterForm from "./FilterForm";
+import { UserDataType } from "../../types/types";
 import { tableText } from "../../constant/textConstant";
+import { AppContext, AppContextProps } from "../../context/AppContext";
 import ThreeDots from "../../assets/dashboard-assets/table-icons/3dots-details-icon.png";
-import UserDetailsPopUp from "./UserDetailsPopUp";
 
 export default function Table() {
+  const { state } = useContext(AppContext) as AppContextProps;
+
   // Table Body
-  const tableData = (data: number) => <ContactRow key={data} />;
+  const tableData = (user: UserDataType) => (
+    <ContactRow
+      key={user.id}
+      org={user.orgName}
+      email={user.email}
+      phone={user.phoneNumber}
+      username={user.userName}
+      dateJoined={user.createdAt}
+    />
+  );
 
   //   Table Column Header
   const tableHeader = (text: string) => (
@@ -20,37 +33,51 @@ export default function Table() {
       </div>
     </th>
   );
-  const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
   return (
     <div className="table-container">
       <table>
         <thead>
           <tr>{tableText.header.map(tableHeader)}</tr>
         </thead>
-        <tbody>{array.map(tableData)}</tbody>
+        <tbody>{state.allUsersData.map(tableData)}</tbody>
       </table>
-      <FilterForm />
+      {/* <FilterForm /> */}
     </div>
   );
 }
 
-export function ContactRow() {
+interface IContactRow {
+  org: string;
+  email: string;
+  phone: string;
+  username: string;
+  dateJoined: string;
+}
+
+export function ContactRow({
+  org,
+  username,
+  email,
+  phone,
+  dateJoined,
+}: IContactRow) {
   return (
     <tr>
       <td>
-        <span>Lendsqr</span>
+        <span>{org}</span>
       </td>
       <td>
-        <span>Adedeji</span>
+        <span>{username}</span>
       </td>
       <td>
-        <span>adedeji@lendsqr.com</span>
+        <span>{email}</span>
       </td>
       <td>
-        <span>07067612139</span>
+        <span>{phone}</span>
       </td>
       <td>
-        <span>May 15 2020 10:00 Am</span>
+        <span>{dateJoined}</span>
       </td>
       <td>
         <div>
