@@ -18,8 +18,13 @@
   font-family: "Roboto Regular";
   src: url("../fonts/Roboto-Regular.ttf");
 }
+@font-face {
+  font-family: "SF Compact Text";
+  src: url("../fonts/SFCompactText.otf");
+}
 :root {
   --font-roboto-regular: "Roboto Regular";
+  --font-sf-compact-text: "SF Compact Text"
   --font-avanir-next-bold: "Avanir Next bold";
   --font-avanir-next-light: "Avanir Next light";
   --font-work-sans-regular: "Work Sans Regular";
