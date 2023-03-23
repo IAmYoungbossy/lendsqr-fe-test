@@ -1,6 +1,6 @@
-import { IActionType } from "../types/types";
 import getUsersData from "../api/fetchUserData";
 import { ACTION_TYPES } from "../constant/objectConstant";
+import { IActionType, UserDataType } from "../types/types";
 
 export const getListOfUsers = async (
   dispatch: React.Dispatch<IActionType>
@@ -11,3 +11,20 @@ export const getListOfUsers = async (
     payload: allUserData,
   });
 };
+
+/********************************************************
+ * This function will take the table data array and will
+ * return an array with arrays of items of the table data
+ * split into any spacified number passed to it.
+ ********************************************************/
+export function splitArray(
+  parts: number,
+  array: UserDataType[]
+) {
+  const result = [];
+  const chunkSize = Math.ceil(array.length / parts);
+  for (let i = 0; i < array.length; i += chunkSize) {
+    result.push(array.slice(i, i + chunkSize));
+  }
+  return result;
+}
