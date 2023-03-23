@@ -1,6 +1,10 @@
+import {
+  IActionType,
+  AppStateType,
+  UserDataType,
+} from "../types/types";
 import getUsersData from "../api/fetchUserData";
 import { ACTION_TYPES } from "../constant/objectConstant";
-import { IActionType, UserDataType } from "../types/types";
 
 export const getListOfUsers = async (
   dispatch: React.Dispatch<IActionType>
@@ -28,3 +32,13 @@ export function splitArray(
   }
   return result;
 }
+
+export const updateState = (
+  state: AppStateType,
+  updates: Partial<AppStateType>
+) => {
+  return {
+    ...state,
+    ...updates,
+  };
+};

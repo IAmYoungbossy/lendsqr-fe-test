@@ -4,8 +4,12 @@ import {
 } from "../context/AppContext";
 import { useContext, useEffect } from "react";
 import Table from "../components/Dashboard/Table";
-import { getListOfUsers } from "../helpers/helpers";
+import {
+  getListOfUsers,
+  splitArray,
+} from "../helpers/helpers";
 import UsersDetails from "../components/Dashboard/UsersDetails";
+import { ACTION_TYPES } from "../constant/objectConstant";
 
 export default function Dashboard() {
   const { state, dispatch } = useContext(
@@ -16,10 +20,17 @@ export default function Dashboard() {
     (async () => await getListOfUsers(dispatch))();
   }, []);
 
+  useEffect(() => {
+    dispatch({
+      type: ACTION_TYPES.TABLE_SIZE_PER_VIEW,
+      payload: splitArray(10, state.allUsersData),
+    });
+  }, [state.allUsersData]);
+
   return (
     <div>
       <UsersDetails />
-      {state.allUsersData.length > 0 && <Table />}
+      {state.pagesPerView.length > 0 && <Table />}
     </div>
   );
 }

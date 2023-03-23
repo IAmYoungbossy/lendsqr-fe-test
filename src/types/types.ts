@@ -54,11 +54,17 @@ export interface AppDataProviderProps {
 }
 
 export interface AppStateType {
+  pageNumber: number;
   allUsersData: [] | UserDataType[];
   singleUserDetails: {} | UserDataType;
+  pagesPerView: [] | UserDataType[][];
 }
 
 export interface IActionType {
   type: string;
-  payload: UserDataType[] | UserDataType;
+  payload:
+    | UserDataType[]
+    | UserDataType
+    | UserDataType[][]
+    | number;
 }
