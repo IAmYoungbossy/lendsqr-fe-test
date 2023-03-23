@@ -3,8 +3,8 @@ import {
   AppStateType,
   UserDataType,
 } from "../types/types";
-import { ACTION_TYPES } from "../constant/objectConstant";
 import { updateState } from "../helpers/helpers";
+import { ACTION_TYPES } from "../constant/objectConstant";
 
 // Dashboard Initial State
 export const initialState = {
@@ -14,7 +14,7 @@ export const initialState = {
   singleUserDetails: {},
 };
 
-export const AppReducer = (
+export const appReducer = (
   state: AppStateType,
   action: IActionType
 ) => {

@@ -1,7 +1,7 @@
 import {
-  AppReducer,
+  appReducer,
   initialState,
-} from "../reducer/DashboardReducer";
+} from "../reducer/appReducer";
 import {
   IActionType,
   AppStateType,
@@ -21,7 +21,7 @@ const AppDataProvider = ({
   children,
 }: AppDataProviderProps) => {
   const [state, dispatch] = useReducer(
-    AppReducer,
+    appReducer,
     initialState
   );
   const value = { state, dispatch };
