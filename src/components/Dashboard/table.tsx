@@ -8,6 +8,8 @@ import FilterForm from "./FilterForm";
 import { UserDataType } from "../../types/types";
 import { tableText } from "../../constant/textConstant";
 import ThreeDots from "../../assets/dashboard-assets/table-icons/3dots-details-icon.png";
+import { Link } from "react-router-dom";
+import { ACTION_TYPES } from "../../constant/objectConstant";
 
 export default function Table() {
   const { state } = useContext(
@@ -70,6 +72,9 @@ export function ContactRow({
   userObject,
   dateJoined,
 }: IContactRow) {
+  const { dispatch } = useContext(
+    AppContext
+  ) as AppContextProps;
   const tableData = [
     org,
     username,
@@ -79,7 +84,14 @@ export function ContactRow({
   ];
 
   return (
-    <tr onClick={() => console.log(userObject)}>
+    <tr
+      onClick={() =>
+        dispatch({
+          type: ACTION_TYPES.SINGLE_USER_DETAILS,
+          payload: userObject,
+        })
+      }
+    >
       {tableData.map((td) => (
         <td key={td}>
           <span>{td}</span>
@@ -88,10 +100,12 @@ export function ContactRow({
       <td>
         <div>
           <div>Active</div>
-          <img
-            src={ThreeDots}
-            alt="Details"
-          />
+          <Link to={`user/${userObject.id}`}>
+            <img
+              src={ThreeDots}
+              alt="Details"
+            />
+          </Link>
         </div>
         {/* <UserDetailsPopUp /> */}
       </td>

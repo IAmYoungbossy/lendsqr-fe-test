@@ -1,4 +1,10 @@
+import { useContext } from "react";
 import "./styles/PersonalDetails.css";
+import { UserDataType } from "../../types/types";
+import {
+  AppContext,
+  AppContextProps,
+} from "../../context/AppContext";
 
 export default function PersonalDetails() {
   return (
@@ -13,29 +19,37 @@ export default function PersonalDetails() {
 }
 
 function PersonalInfo() {
+  const { state } = useContext(
+    AppContext
+  ) as AppContextProps;
+  const userDetails =
+    state.singleUserDetails as UserDataType;
+  const firstName = userDetails.profile.firstName;
+  const lastName = userDetails.profile.lastName;
+
   return (
     <div>
       <h2>Personal Information</h2>
       <div>
         <Detail
           info="Full Name"
-          value="Grace Effiom"
+          value={`${firstName} ${lastName}`}
         />
         <Detail
           info="Phone Number"
-          value="07060780922"
+          value={userDetails.phoneNumber}
         />
         <Detail
           info="Email Address"
-          value="grace@gmail.com"
+          value={userDetails.email}
         />
         <Detail
           info="BVN"
-          value="07060780922"
+          value={userDetails.profile.bvn}
         />
         <Detail
           info="Gender"
-          value="Female"
+          value={userDetails.profile.gender}
         />
         <Detail
           info="Marital Status"
@@ -55,37 +69,47 @@ function PersonalInfo() {
 }
 
 function EducationAndEmployment() {
+  const { state } = useContext(
+    AppContext
+  ) as AppContextProps;
+  const userDetails =
+    state.singleUserDetails as UserDataType;
+  const maxRangeIncome =
+    userDetails.education.monthlyIncome[0];
+  const minRangeIncome =
+    userDetails.education.monthlyIncome[1];
+
   return (
     <div>
       <h2>Education And Employment</h2>
       <div>
         <Detail
           info="Level Of Education"
-          value="B.Sc"
+          value={userDetails.education.level}
         />
         <Detail
           info="Employment Status"
-          value="Employed"
+          value={userDetails.education.employmentStatus}
         />
         <Detail
           info="Sector Of Employment"
-          value="FinTech"
+          value={userDetails.education.sector}
         />
         <Detail
           info="Duration Of Employment"
-          value="2 Years"
+          value={userDetails.education.duration}
         />
         <Detail
           info="Office Email"
-          value="grace@lendsqr.com"
+          value={userDetails.education.officeEmail}
         />
         <Detail
           info="Monthly Income"
-          value="N200,000.00 - N400,000.00"
+          value={`${maxRangeIncome} - ${minRangeIncome}`}
         />
         <Detail
           info="Loan Repayment"
-          value="N40,000.00"
+          value={userDetails.education.loanRepayment}
         />
       </div>
     </div>
@@ -93,21 +117,27 @@ function EducationAndEmployment() {
 }
 
 function Socials() {
+  const { state } = useContext(
+    AppContext
+  ) as AppContextProps;
+  const userDetails =
+    state.singleUserDetails as UserDataType;
+
   return (
     <div>
       <h2>Social</h2>
       <div>
         <Detail
           info="Twitter"
-          value="grace_effiom"
+          value={userDetails.socials.twitter}
         />
         <Detail
           info="Facebook"
-          value="Grace Effiom"
+          value={userDetails.socials.facebook}
         />
         <Detail
           info="Instagram"
-          value="@grace_effiom"
+          value={userDetails.socials.instagram}
         />
       </div>
     </div>
@@ -124,29 +154,42 @@ function Gaurantor() {
 }
 
 function GaurantorDetails() {
+  const { state } = useContext(
+    AppContext
+  ) as AppContextProps;
+  const userDetails =
+    state.singleUserDetails as UserDataType;
+  const firstName = userDetails.guarantor.firstName;
+  const lasstName = userDetails.guarantor.lastName;
   return (
     <div>
       <Detail
         info="Full Name"
-        value="Debby Ogana"
+        value={`${firstName} ${lasstName}`}
       />
       <Detail
         info="Phone Number"
-        value="07060780922"
+        value={userDetails.guarantor.phoneNumber}
       />
       <Detail
         info="Email Address"
-        value="debby@gmail.com"
+        value={userDetails.guarantor.address}
       />
       <Detail
         info="Relationship"
-        value="Sister"
+        value={userDetails.guarantor.gender}
       />
     </div>
   );
 }
 
-function Detail({ info, value }: { info: string; value: string }) {
+function Detail({
+  info,
+  value,
+}: {
+  info: string;
+  value: string;
+}) {
   return (
     <div>
       <h4>{info}</h4>

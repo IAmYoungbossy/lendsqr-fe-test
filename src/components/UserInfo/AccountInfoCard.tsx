@@ -1,8 +1,13 @@
+import { useContext } from "react";
 import "./styles/AccountInfoCard.css";
 import { views } from "../../constant/textConstant";
-import AvatarIcon from "../../assets/dashboard-assets/details-page-icon/avatar-icon.png";
+import {
+  AppContext,
+  AppContextProps,
+} from "../../context/AppContext";
 import StarChecked from "../../assets/dashboard-assets/details-page-icon/star-checked-icon.png";
 import StartUncheck from "../../assets/dashboard-assets/details-page-icon/star-unchecked-icon.png";
+import { UserDataType } from "../../types/types";
 
 export default function AccountInfoCard() {
   return (
@@ -18,15 +23,23 @@ export default function AccountInfoCard() {
 }
 
 function Avatar() {
+  const { state } = useContext(
+    AppContext
+  ) as AppContextProps;
+  const userDetails =
+    state.singleUserDetails as UserDataType;
+  const firstName = userDetails.profile.firstName;
+  const lastName = userDetails.profile.lastName;
+
   return (
     <div>
       <img
-        src={AvatarIcon}
+        src={userDetails.profile.avatar}
         alt="Avatar"
       />
       <div>
-        <h3>Grace Effiom</h3>
-        <p>LSQFf587g90</p>
+        <h3>{`${firstName} ${lastName}`}</h3>
+        <p>{userDetails.accountNumber}</p>
       </div>
     </div>
   );
@@ -55,10 +68,16 @@ function UserTier() {
 }
 
 function AccountInfo() {
+  const { state } = useContext(
+    AppContext
+  ) as AppContextProps;
+  const userDetails =
+    state.singleUserDetails as UserDataType;
+
   return (
     <div>
-      <h4>N200,000.00</h4>
-      <p>01537741/Providus Bank</p>
+      <h4>{userDetails.accountBalance}</h4>
+      <p>{userDetails.profile.bvn}/Providus Bank</p>
     </div>
   );
 }

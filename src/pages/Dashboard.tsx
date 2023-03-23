@@ -3,7 +3,7 @@ import {
   AppContextProps,
 } from "../context/AppContext";
 import { useContext, useEffect } from "react";
-import Table from "../components/Dashboard/table";
+import Table from "../components/Dashboard/Table";
 import { getListOfUsers } from "../helpers/helpers";
 import UsersDetails from "../components/Dashboard/UsersDetails";
 

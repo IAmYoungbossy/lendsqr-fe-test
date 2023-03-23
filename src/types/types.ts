@@ -55,9 +55,10 @@ export interface AppDataProviderProps {
 
 export interface AppStateType {
   allUsersData: [] | UserDataType[];
+  singleUserDetails: {} | UserDataType;
 }
 
 export interface IActionType {
   type: string;
-  payload: UserDataType[];
+  payload: UserDataType[] | UserDataType;
 }
