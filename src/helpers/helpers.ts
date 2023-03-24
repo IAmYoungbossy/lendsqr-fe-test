@@ -26,7 +26,7 @@ export function splitArray(
   array: UserDataType[]
 ) {
   const result = [];
-  const chunkSize = Math.ceil(array.length / parts);
+  const chunkSize = Math.floor(array.length / parts);
   for (let i = 0; i < array.length; i += chunkSize) {
     result.push(array.slice(i, i + chunkSize));
   }

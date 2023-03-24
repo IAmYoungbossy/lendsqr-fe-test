@@ -23,7 +23,7 @@ export default function Dashboard() {
   useEffect(() => {
     dispatch({
       type: ACTION_TYPES.TABLE_SIZE_PER_VIEW,
-      payload: splitArray(10, state.allUsersData),
+      payload: splitArray(11, state.allUsersData),
     });
   }, [state.allUsersData]);
 
