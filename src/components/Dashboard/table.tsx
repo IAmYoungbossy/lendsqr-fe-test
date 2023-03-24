@@ -3,13 +3,25 @@ import {
   AppContext,
   AppContextProps,
 } from "../../context/AppContext";
-import { useContext } from "react";
+import FilterForm from "./FilterForm";
 import { ContactRow } from "./ContactRow";
 import { UserDataType } from "../../types/types";
 import Pagination from "../Pagination/Pagination";
+import { useContext, useState, useEffect } from "react";
 import { tableText } from "../../constant/textConstant";
 
 export default function Table() {
+  const [toggleFilter, setToggleFilter] = useState(false);
+
+  useEffect(() => {
+    const toggle = () => setToggleFilter(false);
+    document.addEventListener("click", toggle);
+
+    return () => {
+      document.removeEventListener("click", toggle);
+    };
+  });
+
   const {
     state: { currentPage, pages },
   } = useContext(AppContext) as AppContextProps;
@@ -30,6 +42,10 @@ export default function Table() {
         <img
           alt="Filter Icon"
           src={tableText.iconUrl}
+          onClick={(e) => {
+            e.stopPropagation();
+            setToggleFilter(!toggleFilter);
+          }}
         />
       </div>
     </th>
@@ -44,7 +60,7 @@ export default function Table() {
           </thead>
           <tbody>{pages[currentPage].map(tableData)}</tbody>
         </table>
-        {/* <FilterForm /> */}
+        {toggleFilter && <FilterForm />}
       </div>
       <div>
         <Pagination />
