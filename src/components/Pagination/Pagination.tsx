@@ -3,7 +3,10 @@ import {
   newPagesToDisplay,
   displayInitialPages,
 } from "../../helpers/helpers";
+import "./styles/Pagination.css";
 import { useEffect, useState } from "react";
+import { BiChevronLeft } from "react-icons/bi";
+import { BiChevronRight } from "react-icons/bi";
 
 interface PaginationProps {
   pages: number;
@@ -32,14 +35,18 @@ export default function Pagination({
   }, [pages, currentPage]);
 
   return (
-    <div>
-      <div>prev</div>
+    <div className="pagination">
+      <div>
+        <BiChevronLeft />
+      </div>
       <ul>
         {displayPages.map((item, index) => (
           <li key={`${item} ${index}`}>{item}</li>
         ))}
       </ul>
-      <div>next</div>
+      <div>
+        <BiChevronRight />
+      </div>
     </div>
   );
 }

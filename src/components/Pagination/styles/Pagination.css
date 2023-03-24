@@ -1,0 +1,34 @@
+.pagination {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+.pagination svg {
+  width: 20px;
+  height: 20px;
+  color: rgba(33, 63, 125, 0.5490196078);
+}
+.pagination div {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(33, 63, 125, 0.1);
+}
+.pagination ul {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+.pagination li {
+  opacity: 0.6;
+  font-size: 16px;
+  font-weight: 400;
+  list-style: none;
+  color: #545f7d;
+  line-height: 19px;
+  font-style: normal;
+  font-family: var(--font-work-sans-regular);
+}/*# sourceMappingURL=Pagination.css.map */
