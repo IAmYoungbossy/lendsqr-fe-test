@@ -1,17 +1,27 @@
 import "./styles/UserDetailsPopUp.css";
+import { Link } from "react-router-dom";
 import { userPopUp } from "../../constant/textConstant";
 
-export default function UserDetailsPopUp() {
+interface IUserDetailsPopUp {
+  id: string;
+}
+
+export default function UserDetailsPopUp({
+  id,
+}: IUserDetailsPopUp) {
   return (
-    <div className="user-details-pop-up">
+    <div
+      className="user-details-pop-up"
+      onClick={(e) => e.stopPropagation()}
+    >
       {userPopUp.map((item) => (
-        <button key={item.name}>
+        <Link to={`user/${id}`}>
           <img
             src={item.icon}
             alt={item.name}
           />
           <span>{item.name}</span>
-        </button>
+        </Link>
       ))}
     </div>
   );

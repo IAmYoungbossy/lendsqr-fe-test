@@ -1,17 +1,21 @@
 .user-details-pop-up {
   top: 9px;
+  z-index: 1;
   right: 20px;
-  width: 100%;
+  width: 100vw;
   max-width: 180px;
   min-height: 130px;
   position: absolute;
   padding: 23.14px 21.44px 22px;
-  border-radius: 4px;
   background: #ffffff;
   border: 1px solid rgba(84, 95, 125, 0.04);
-  box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.009);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
 }
-.user-details-pop-up button {
+.user-details-pop-up img {
+  position: static;
+}
+.user-details-pop-up a {
   width: 100%;
   border: none;
   outline: none;
@@ -27,6 +31,6 @@
   display: flex;
   align-items: center;
 }
-.user-details-pop-up > button:first-child {
+.user-details-pop-up > a:first-child {
   margin-top: 0;
 }/*# sourceMappingURL=UserDetailsPopUp.css.map */

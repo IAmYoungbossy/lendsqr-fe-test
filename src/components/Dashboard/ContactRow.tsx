@@ -2,10 +2,10 @@ import {
   AppContext,
   AppContextProps,
 } from "../../context/AppContext";
-import { useContext } from "react";
-import { Link } from "react-router-dom";
 import { UserDataType } from "../../types/types";
+import UserDetailsPopUp from "./UserDetailsPopUp";
 import { formatTime } from "../../helpers/helpers";
+import { useState, useContext, useEffect } from "react";
 import { ACTION_TYPES } from "../../constant/objectConstant";
 import ThreeDots from "../../assets/dashboard-assets/table-icons/3dots-details-icon.png";
 
@@ -14,9 +14,11 @@ interface IContactRow {
 }
 
 export function ContactRow({ user }: IContactRow) {
+  const [toggleDetails, setToggleDetails] = useState(false);
   const { dispatch } = useContext(
     AppContext
   ) as AppContextProps;
+
   const tableData = [
     user.orgName,
     user.userName,
@@ -24,6 +26,15 @@ export function ContactRow({ user }: IContactRow) {
     user.phoneNumber,
     formatTime(user.createdAt),
   ];
+
+  useEffect(() => {
+    const toggle = () => setToggleDetails(false);
+    document.addEventListener("click", toggle);
+
+    return () => {
+      document.removeEventListener("click", toggle);
+    };
+  });
 
   return (
     <tr
@@ -44,14 +55,18 @@ export function ContactRow({ user }: IContactRow) {
       <td>
         <div>
           <div>Active</div>
-          <Link to={`user/${user.id}`}>
-            <img
-              src={ThreeDots}
-              alt="Details"
-            />
-          </Link>
+          <img
+            alt="Details"
+            src={ThreeDots}
+            onClick={(e) => {
+              e.stopPropagation();
+              setToggleDetails(!toggleDetails);
+            }}
+          />
+          {toggleDetails && (
+            <UserDetailsPopUp id={user.id} />
+          )}
         </div>
-        {/* <UserDetailsPopUp /> */}
       </td>
     </tr>
   );
