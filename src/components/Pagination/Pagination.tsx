@@ -1,51 +1,84 @@
 import {
+  prevPage,
+  nextPage,
   setArrayContent,
   newPagesToDisplay,
   displayInitialPages,
 } from "../../helpers/helpers";
 import "./styles/Pagination.css";
-import { useEffect, useState } from "react";
+import {
+  AppContext,
+  AppContextProps,
+} from "../../context/AppContext";
+import RowsPerView from "./RowsPerView";
 import { BiChevronLeft } from "react-icons/bi";
 import { BiChevronRight } from "react-icons/bi";
+import { useEffect, useState, useContext } from "react";
 
-interface PaginationProps {
-  pages: number;
-  currentPage: number;
-}
+export default function Pagination() {
+  const {
+    dispatch,
+    state: { currentPage, pages },
+  } = useContext(AppContext) as AppContextProps;
 
-export default function Pagination({
-  pages,
-  currentPage,
-}: PaginationProps) {
+  const numberOfPages = pages.length;
+
   const [displayPages, setDisplayPages] = useState(
-    displayInitialPages(pages)
+    displayInitialPages(numberOfPages)
   );
 
   useEffect(() => {
-    if (pages < 6) setDisplayPages(setArrayContent(pages));
+    if (numberOfPages < 6)
+      setDisplayPages(setArrayContent(numberOfPages));
+    if (currentPage < 3) {
+      setDisplayPages([
+        1,
+        2,
+        3,
+        "...",
+        numberOfPages - 1,
+        numberOfPages,
+      ]);
+    }
     if (
-      pages > 5 &&
-      (currentPage > 3 ||
-        currentPage < displayPages[pages - 2])
+      numberOfPages > 5 &&
+      (currentPage + 1 > 3 ||
+        currentPage + 1 < displayPages[numberOfPages - 2])
     ) {
       setDisplayPages(
-        newPagesToDisplay(pages, currentPage)
+        newPagesToDisplay(numberOfPages, currentPage)
       );
     }
-  }, [pages, currentPage]);
+  }, [numberOfPages, currentPage]);
 
   return (
-    <div className="pagination">
-      <div>
-        <BiChevronLeft />
-      </div>
-      <ul>
-        {displayPages.map((item, index) => (
-          <li key={`${item} ${index}`}>{item}</li>
-        ))}
-      </ul>
-      <div>
-        <BiChevronRight />
+    <div className="pagination-div">
+      <RowsPerView />
+      <div className="pagination">
+        {/* The previous page button */}
+        <div
+          onClick={prevPage.bind(null, {
+            dispatch,
+            currentPage,
+          })}
+        >
+          <BiChevronLeft />
+        </div>
+        <ul>
+          {displayPages.map((item, index) => (
+            <li key={`${item} ${index}`}>{item}</li>
+          ))}
+        </ul>
+        {/* The next page button */}
+        <div
+          onClick={nextPage.bind(null, {
+            numberOfPages,
+            currentPage,
+            dispatch,
+          })}
+        >
+          <BiChevronRight />
+        </div>
       </div>
     </div>
   );

@@ -36,3 +36,10 @@
     font-family: var(--font-work-sans-regular);
   }
 }
+
+.pagination-div {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}

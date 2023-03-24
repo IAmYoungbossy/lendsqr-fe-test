@@ -8,9 +8,9 @@ import { ACTION_TYPES } from "../constant/objectConstant";
 
 // Dashboard Initial State
 export const initialState = {
-  pageNumber: 0,
+  currentPage: 0,
   allUsersData: [],
-  pagesPerView: [],
+  pages: [],
   singleUserDetails: {},
 };
 
@@ -21,7 +21,7 @@ export const appReducer = (
   switch (action.type) {
     case ACTION_TYPES.PAGE_NUMBER:
       return updateState(state, {
-        pageNumber: action.payload as number,
+        currentPage: action.payload as number,
       });
 
     case ACTION_TYPES.ALL_USERS_DATA:
@@ -36,7 +36,7 @@ export const appReducer = (
 
     case ACTION_TYPES.TABLE_SIZE_PER_VIEW:
       return updateState(state, {
-        pagesPerView: action.payload as UserDataType[][],
+        pages: action.payload as UserDataType[][],
       });
 
     default:

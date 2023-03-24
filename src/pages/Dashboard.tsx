@@ -30,7 +30,7 @@ export default function Dashboard() {
   return (
     <div>
       <UsersDetails />
-      {state.pagesPerView.length > 0 && <Table />}
+      {state.pages.length > 0 && <Table />}
     </div>
   );
 }

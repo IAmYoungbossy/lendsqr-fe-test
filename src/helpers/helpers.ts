@@ -54,17 +54,17 @@ export const newPagesToDisplay = (
   pages: number,
   currentPage: number
 ) => {
-  if (pages - 1 - currentPage <= 1 && pages > 5) {
+  if (pages - 1 - currentPage <= 2 && pages > 5) {
     if (currentPage >= pages - 1) {
       return [1, 2, 3, "...", pages - 1, pages];
     }
-    return [1, 2, "...", currentPage, pages - 1, pages];
+    return [1, 2, "...", pages - 2, pages - 1, pages];
   }
   return [
     1,
     2,
     "...",
-    currentPage,
+    currentPage + 1,
     "...",
     pages - 1,
     pages,
@@ -77,4 +77,37 @@ export const setArrayContent = (pages: number) => {
     newPagesToDisplay.push(i);
   }
   return newPagesToDisplay;
+};
+
+interface IPrevPage {
+  currentPage: number;
+  dispatch: React.Dispatch<IActionType>;
+}
+
+interface INextPage extends IPrevPage {
+  numberOfPages: number;
+}
+
+export const prevPage = ({
+  dispatch,
+  currentPage,
+}: IPrevPage) => {
+  dispatch({
+    type: ACTION_TYPES.PAGE_NUMBER,
+    payload: currentPage > 2 ? currentPage - 1 : 0,
+  });
+};
+
+export const nextPage = ({
+  dispatch,
+  currentPage,
+  numberOfPages,
+}: INextPage) => {
+  dispatch({
+    type: ACTION_TYPES.PAGE_NUMBER,
+    payload:
+      currentPage < numberOfPages - 1
+        ? currentPage + 1
+        : numberOfPages - 1,
+  });
 };

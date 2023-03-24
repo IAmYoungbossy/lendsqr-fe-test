@@ -31,4 +31,11 @@
   line-height: 19px;
   font-style: normal;
   font-family: var(--font-work-sans-regular);
+}
+
+.pagination-div {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
 }/*# sourceMappingURL=Pagination.css.map */
