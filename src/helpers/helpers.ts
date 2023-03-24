@@ -42,3 +42,39 @@ export const updateState = (
     ...updates,
   };
 };
+
+export const displayInitialPages = (pages: number) => {
+  if (pages > 5) {
+    return [1, 2, 3, "...", pages - 1, pages];
+  }
+  return [1, 2, 3, 4, 5];
+};
+
+export const newPagesToDisplay = (
+  pages: number,
+  currentPage: number
+) => {
+  if (pages - 1 - currentPage <= 1 && pages > 5) {
+    if (currentPage >= pages - 1) {
+      return [1, 2, 3, "...", pages - 1, pages];
+    }
+    return [1, 2, "...", currentPage, pages - 1, pages];
+  }
+  return [
+    1,
+    2,
+    "...",
+    currentPage,
+    "...",
+    pages - 1,
+    pages,
+  ];
+};
+
+export const setArrayContent = (pages: number) => {
+  let newPagesToDisplay = [];
+  for (let i = 1; i <= pages; i++) {
+    newPagesToDisplay.push(i);
+  }
+  return newPagesToDisplay;
+};

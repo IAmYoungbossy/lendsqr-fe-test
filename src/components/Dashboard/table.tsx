@@ -5,16 +5,18 @@ import {
 } from "../../context/AppContext";
 import { useContext } from "react";
 import FilterForm from "./FilterForm";
+import { Link } from "react-router-dom";
 import { UserDataType } from "../../types/types";
 import { tableText } from "../../constant/textConstant";
-import ThreeDots from "../../assets/dashboard-assets/table-icons/3dots-details-icon.png";
-import { Link } from "react-router-dom";
 import { ACTION_TYPES } from "../../constant/objectConstant";
+import ThreeDots from "../../assets/dashboard-assets/table-icons/3dots-details-icon.png";
+import Pagination from "../Pagination/Pagination";
 
 export default function Table() {
-  const { state } = useContext(
-    AppContext
-  ) as AppContextProps;
+  const {
+    state: { pageNumber, pagesPerView },
+    dispatch,
+  } = useContext(AppContext) as AppContextProps;
 
   // Table Body
   const tableData = (user: UserDataType) => (
@@ -43,15 +45,31 @@ export default function Table() {
   );
 
   return (
-    <div className="table-container">
-      <table>
-        <thead>
-          <tr>{tableText.header.map(tableHeader)}</tr>
-        </thead>
-        <tbody>{state.allUsersData.map(tableData)}</tbody>
-      </table>
-      {/* <FilterForm /> */}
-    </div>
+    <>
+      <div
+        className="table-container"
+        onClick={() => {
+          dispatch({
+            type: ACTION_TYPES.PAGE_NUMBER,
+            payload: pageNumber + 1,
+          });
+        }}
+      >
+        <table>
+          <thead>
+            <tr>{tableText.header.map(tableHeader)}</tr>
+          </thead>
+          <tbody>
+            {pagesPerView[pageNumber].map(tableData)}
+          </tbody>
+        </table>
+        {/* <FilterForm /> */}
+      </div>
+      <Pagination
+        pages={pagesPerView.length}
+        currentPage={pageNumber + 1}
+      />
+    </>
   );
 }
 
