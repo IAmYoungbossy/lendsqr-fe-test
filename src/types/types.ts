@@ -36,6 +36,7 @@ type EducationType = {
 export type UserDataType = {
   id: string;
   email: string;
+  active?: string;
   orgName: string;
   userName: string;
   createdAt: string;

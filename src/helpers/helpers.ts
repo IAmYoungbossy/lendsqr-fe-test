@@ -1,18 +1,33 @@
 import {
+  STATUS_OBJ,
+  ACTION_TYPES,
+} from "../constant/objectConstant";
+import saveToLS, {
+  getUsersFromLS,
+} from "../localStorage/localStorage";
+import {
   IActionType,
   AppStateType,
   UserDataType,
 } from "../types/types";
 import getUsersData from "../api/fetchUserData";
-import { ACTION_TYPES } from "../constant/objectConstant";
 
 export const getListOfUsers = async (
   dispatch: React.Dispatch<IActionType>
 ) => {
+  // Gets Data from mock API.
   const { allUserData } = await getUsersData();
+
+  // Saves "allUserData" to LocalStorage if null.
+  saveToLS(allUserData);
+
+  // Retrievs saved data from LocalStorage for use.
+  const users = getUsersFromLS() as UserDataType[];
+
+  // Saves to ReactJs's state for updating UI.
   dispatch({
     type: ACTION_TYPES.ALL_USERS_DATA,
-    payload: allUserData,
+    payload: users,
   });
 };
 
@@ -131,3 +146,16 @@ export function formatTime(timeStr: string) {
   // Concatenate the formatted date and time strings
   return `${formattedDate} ${formattedTime}`;
 }
+
+export const addStatusProp = (user: UserDataType) => {
+  const firstLetter = user.email.charAt(0).toUpperCase();
+  if (STATUS_OBJ.ACTIVE.includes(firstLetter))
+    user.active = "Active";
+  else if (STATUS_OBJ.PENDING.includes(firstLetter))
+    user.active = "Pending";
+  else if (STATUS_OBJ.INACTIVE.includes(firstLetter))
+    user.active = "Inactive";
+  if (STATUS_OBJ.BLACKLISTED.includes(firstLetter))
+    user.active = "Blacklisted";
+  return user;
+};
