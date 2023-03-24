@@ -1,0 +1,53 @@
+.rows-per-view {
+  display: flex;
+  line-height: 16px;
+  font-style: normal;
+  align-items: center;
+  font-family: var(--font-work-sans-regular);
+
+  label,
+  span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #545f7d;
+    margin-right: 10px;
+  }
+
+  & > div {
+    width: 80px;
+    height: 30px;
+    display: block;
+    overflow: hidden;
+    margin-right: 10px;
+    position: relative;
+
+    svg {
+      top: 2px;
+      right: 11px;
+      width: 25px;
+      height: 25px;
+      color: #213f7d;
+      position: absolute;
+    }
+  }
+
+  select {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #213f7d;
+    appearance: none;
+    padding: 7px 12px;
+    position: relative;
+    border-radius: 4px;
+    background-color: rgba(33, 63, 125, 0.1);
+
+    &:focus-visible {
+      border: none;
+      outline: none;
+    }
+  }
+}
