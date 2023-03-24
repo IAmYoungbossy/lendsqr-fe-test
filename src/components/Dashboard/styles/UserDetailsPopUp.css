@@ -1,7 +1,7 @@
 .user-details-pop-up {
-  top: 9px;
+  top: -17px;
   z-index: 1;
-  right: 20px;
+  right: -52px;
   width: 100vw;
   max-width: 180px;
   min-height: 130px;
@@ -15,7 +15,8 @@
 .user-details-pop-up img {
   position: static;
 }
-.user-details-pop-up a {
+.user-details-pop-up a,
+.user-details-pop-up button {
   width: 100%;
   border: none;
   outline: none;
@@ -30,6 +31,7 @@
   gap: 8.46px;
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 .user-details-pop-up > a:first-child {
   margin-top: 0;

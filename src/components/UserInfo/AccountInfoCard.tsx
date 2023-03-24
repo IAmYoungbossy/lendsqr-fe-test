@@ -76,7 +76,7 @@ function AccountInfo() {
 
   return (
     <div>
-      <h4>{userDetails.accountBalance}</h4>
+      <h4>₦{userDetails.accountBalance}</h4>
       <p>{userDetails.profile.bvn}/Providus Bank</p>
     </div>
   );

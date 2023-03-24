@@ -109,7 +109,7 @@ function EducationAndEmployment() {
         />
         <Detail
           info="Loan Repayment"
-          value={userDetails.education.loanRepayment}
+          value={`₦${userDetails.education.loanRepayment}`}
         />
       </div>
     </div>

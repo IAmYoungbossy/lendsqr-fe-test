@@ -25,8 +25,13 @@
   margin-top: 8px;
   font-size: 16px;
   font-weight: 600;
-  color: rgba(84, 95, 125, 0.8588235294);
   line-height: 19px;
+  color: rgba(84, 95, 125, 0.8588235294);
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-right: 10px;
+  text-overflow: ellipsis;
 }
 .personal-details > div:nth-child(-n+4) > div {
   display: grid;

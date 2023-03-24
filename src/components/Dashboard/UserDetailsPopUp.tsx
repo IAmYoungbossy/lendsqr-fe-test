@@ -14,15 +14,31 @@ export default function UserDetailsPopUp({
       className="user-details-pop-up"
       onClick={(e) => e.stopPropagation()}
     >
-      {userPopUp.map((item) => (
-        <Link to={`user/${id}`}>
-          <img
-            src={item.icon}
-            alt={item.name}
-          />
-          <span>{item.name}</span>
-        </Link>
-      ))}
+      {userPopUp.map((item) => {
+        if (item.name === "View Details") {
+          return (
+            <Link
+              to={`user/${id}`}
+              key={item.name}
+            >
+              <img
+                src={item.icon}
+                alt={item.name}
+              />
+              <span>{item.name}</span>
+            </Link>
+          );
+        }
+        return (
+          <button key={item.name}>
+            <img
+              src={item.icon}
+              alt={item.name}
+            />
+            <span>{item.name}</span>
+          </button>
+        );
+      })}
     </div>
   );
 }
