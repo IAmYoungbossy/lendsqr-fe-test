@@ -34,15 +34,22 @@
   }
 
   td {
+    color: #545f7d;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    width: 100vw;
     height: 17px;
     font-size: 14px;
-    font-weight: 400;
-    color: #545f7d;
     line-height: 17px;
-    font-style: normal;
-    padding: 20px 0 19px;
-    font-family: var(--font-work-sans-regular);
+    padding: 20px 10px 19px 0;
     border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+
+    font-weight: 400;
+    font-style: normal;
+    font-family: var(--font-work-sans-regular);
   }
 
   tr > td:last-child > div {
@@ -56,6 +63,26 @@
       right: -6px;
       position: absolute;
     }
+  }
+
+  tr > td:first-child {
+    max-width: 151px;
+  }
+  tr > td:nth-child(2) {
+    max-width: 141px;
+  }
+  tr > td:nth-child(3) {
+    max-width: 182px;
+  }
+  tr > td:nth-child(4) {
+    max-width: 159px;
+  }
+  tr > td:nth-child(5) {
+    max-width: 189px;
+  }
+  tr > td:nth-child(6) {
+    width: 146.66px;
+    padding-right: 0;
   }
 
   tbody > tr:last-child > td {

@@ -111,3 +111,23 @@ export const nextPage = ({
         : numberOfPages - 1,
   });
 };
+
+export function formatTime(timeStr: string) {
+  // Parse time string
+  const date = new Date(timeStr);
+
+  // Format the date and time strings
+  const formattedDate = date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+  const formattedTime = date.toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  });
+
+  // Concatenate the formatted date and time strings
+  return `${formattedDate} ${formattedTime}`;
+}
