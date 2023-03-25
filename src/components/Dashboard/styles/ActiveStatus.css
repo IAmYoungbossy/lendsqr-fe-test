@@ -1,9 +1,32 @@
-.active-status {
+.status {
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
   text-align: center;
   font-style: normal;
+  border-radius: 100px;
+}
+
+.active {
+  padding: 7px 14px 6px;
   color: var(--active-status-toggle-color);
   background-color: var(--active-status-toggle-bgColor);
+}
+
+.inactive {
+  padding: 7px 13px 6px;
+  color: var(--inactive-status-toggle-color);
+  background-color: var(--inactive-status-toggle-bgColor);
+}
+
+.pending {
+  padding: 7px 18px 6px;
+  color: var(--pending-status-toggle-color);
+  background-color: var(--pending-status-toggle-bgColor);
+}
+
+.blacklisted {
+  padding: 7px 12px 6px;
+  color: var(--blacklisted-status-toggle-color);
+  background-color: var(--blacklisted-status-toggle-bgColor);
 }/*# sourceMappingURL=ActiveStatus.css.map */

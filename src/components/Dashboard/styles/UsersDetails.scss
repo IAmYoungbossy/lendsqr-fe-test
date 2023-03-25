@@ -51,12 +51,12 @@
       }
     }
 
-    // & > div:first-child {
-    //   margin-left: 0;
-    // }
+    & > div:first-child {
+      margin-left: 0;
+    }
 
-    // & > div:last-child {
-    //   margin-left: 25px;
-    // }
+    & > div:last-child {
+      margin-left: 25px;
+    }
   }
 }

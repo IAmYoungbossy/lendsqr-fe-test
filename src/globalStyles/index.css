@@ -23,10 +23,16 @@
   src: url("../fonts/SFCompactText.otf");
 }
 :root {
-  --active-status-toggle-color: "#39CD62"
+  --active-status-toggle-color: #39cd62;
+  --active-status-toggle-bgColor: #f3fcf6;
+  --pending-status-toggle-color: #e9b200;
+  --pending-status-toggle-bgColor: #fdf7e5;
+  --inactive-status-toggle-color: #545f7d;
+  --inactive-status-toggle-bgColor: #f5f5f7;
+  --blacklisted-status-toggle-color: #e4033b;
+  --blacklisted-status-toggle-bgColor: #fce6eb;
   --font-roboto-regular: "Roboto Regular";
-  --active-status-toggle-bgColor: "#f3fcf6"
-  --font-sf-compact-text: "SF Compact Text"
+  --font-sf-compact-text: "SF Compact Text";
   --font-avanir-next-bold: "Avanir Next bold";
   --font-avanir-next-light: "Avanir Next light";
   --font-work-sans-regular: "Work Sans Regular";

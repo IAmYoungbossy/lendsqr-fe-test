@@ -8,6 +8,7 @@ import { formatTime } from "../../helpers/helpers";
 import { useState, useContext, useEffect } from "react";
 import { ACTION_TYPES } from "../../constant/objectConstant";
 import ThreeDots from "../../assets/dashboard-assets/table-icons/3dots-details-icon.png";
+import Status from "./ActiveStatus";
 
 interface IContactRow {
   user: UserDataType;
@@ -54,7 +55,7 @@ export function ContactRow({ user }: IContactRow) {
       })}
       <td>
         <div>
-          <div>Active</div>
+          <Status status={user.active as string} />
           <img
             alt="Details"
             src={ThreeDots}

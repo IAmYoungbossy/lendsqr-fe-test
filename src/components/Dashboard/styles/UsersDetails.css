@@ -45,4 +45,10 @@
   font-style: normal;
   text-transform: uppercase;
   font-family: var(--font-work-sans-regular);
+}
+.users-details > div > div:first-child {
+  margin-left: 0;
+}
+.users-details > div > div:last-child {
+  margin-left: 25px;
 }/*# sourceMappingURL=UsersDetails.css.map */
