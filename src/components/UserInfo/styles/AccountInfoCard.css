@@ -2,6 +2,7 @@
   width: auto;
   margin-top: 40px;
   font-style: normal;
+  overflow-x: auto;
   font-family: var(--font-work-sans-regular);
   border-radius: 4px;
   padding: 30px 30px 0;
@@ -12,6 +13,8 @@
 .account-info-card > div {
   gap: 30px;
   display: flex;
+  width: -moz-max-content;
+  width: max-content;
   align-items: center;
 }
 .account-info-card > div > div:first-child {
@@ -73,6 +76,8 @@
   font-size: 16px;
   margin-top: 51px;
   font-weight: 500;
+  width: -moz-max-content;
+  width: max-content;
   justify-content: space-between;
 }
 .account-info-card ul li {

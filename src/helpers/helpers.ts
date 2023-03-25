@@ -159,3 +159,26 @@ export const addStatusProp = (user: UserDataType) => {
     user.active = "Blacklisted";
   return user;
 };
+
+export function toggleNavBar(width: string) {
+  const phoneNavBar = document.getElementById("phone-nav");
+  const navContainer = document.getElementById(
+    "phone-nav-container"
+  );
+
+  if (phoneNavBar && navContainer && width === "280px") {
+    navContainer.classList.add("show");
+    setTimeout(
+      () => (phoneNavBar.style.width = width),
+      300
+    );
+  } else {
+    if (phoneNavBar && navContainer) {
+      phoneNavBar.style.width = width;
+      setTimeout(
+        () => navContainer.classList.remove("show"),
+        500
+      );
+    }
+  }
+}

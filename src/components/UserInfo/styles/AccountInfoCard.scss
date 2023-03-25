@@ -2,6 +2,7 @@
   width: auto;
   margin-top: 40px;
   font-style: normal;
+  overflow-x: auto;
   font-family: var(--font-work-sans-regular);
 
   border-radius: 4px;
@@ -14,6 +15,7 @@
   & > div {
     gap: 30px;
     display: flex;
+    width: max-content;
     align-items: center;
   }
 
@@ -91,6 +93,7 @@
     font-size: 16px;
     margin-top: 51px;
     font-weight: 500;
+    width: max-content;
     justify-content: space-between;
 
     li {

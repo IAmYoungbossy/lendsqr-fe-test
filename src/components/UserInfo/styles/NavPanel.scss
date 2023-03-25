@@ -31,7 +31,9 @@
   }
 
   & > div {
+    gap: 5px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
   }
@@ -39,6 +41,7 @@
   & > div:last-of-type > div:last-child {
     gap: 20px;
     display: flex;
+    flex-wrap: wrap;
 
     button {
       height: 40px;
@@ -64,6 +67,18 @@
     & > button:last-child {
       color: #39cdcc;
       border: 1px solid #39cdcc;
+    }
+  }
+
+  @media screen and (max-width: 440px) {
+    & > div,
+    & > div:last-of-type > div:last-child {
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 592px) {
+    & > div:last-of-type > div:last-child {
+      margin-top: 32px;
     }
   }
 }

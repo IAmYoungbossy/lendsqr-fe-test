@@ -27,13 +27,16 @@
   font-family: var(--font-work-sans-regular);
 }
 .nav-panel > div {
+  gap: 5px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
 .nav-panel > div:last-of-type > div:last-child {
   gap: 20px;
   display: flex;
+  flex-wrap: wrap;
 }
 .nav-panel > div:last-of-type > div:last-child button {
   height: 40px;
@@ -57,4 +60,14 @@
 .nav-panel > div:last-of-type > div:last-child > button:last-child {
   color: #39cdcc;
   border: 1px solid #39cdcc;
+}
+@media screen and (max-width: 440px) {
+  .nav-panel > div, .nav-panel > div:last-of-type > div:last-child {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 592px) {
+  .nav-panel > div:last-of-type > div:last-child {
+    margin-top: 32px;
+  }
 }/*# sourceMappingURL=NavPanel.css.map */
