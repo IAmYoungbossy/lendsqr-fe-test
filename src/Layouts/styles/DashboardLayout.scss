@@ -9,7 +9,7 @@
   }
 
   // Users details container
-  & > div > div {
+  & > div > div:not(:first-child) {
     width: 100%;
     display: flex;
     padding: 60px;
@@ -17,5 +17,16 @@
     max-width: 1157px;
     flex-direction: column;
     background-color: #fbfbfb;
+  }
+
+  @media screen and (max-width: 950px) {
+    & > div > div:not(:first-child) {
+      padding: 60px 30px;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    & > div > div:not(:first-child) {
+      padding: 60px 10px;
+    }
   }
 }

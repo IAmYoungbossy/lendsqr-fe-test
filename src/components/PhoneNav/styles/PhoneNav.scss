@@ -1,0 +1,23 @@
+.phone-nav {
+  top: 0;
+  left: 0;
+  width: 0;
+  z-index: 5;
+  height: 100%;
+  position: fixed;
+  transition: 0.5s;
+  padding-top: 60px;
+  overflow-x: hidden;
+}
+
+.phone-nav nav {
+  display: block;
+  transition: 0.3s;
+}
+
+.phone-nav .closebtn {
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  position: absolute;
+}

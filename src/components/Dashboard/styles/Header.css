@@ -9,7 +9,7 @@ header {
   justify-content: space-between;
   box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
 }
-header > div:first-child {
+header .logo-search-bar {
   gap: 20px;
   width: 100%;
   display: flex;
@@ -17,9 +17,22 @@ header > div:first-child {
   align-items: center;
   justify-content: space-between;
 }
-header > div:first-child > div:first-child {
+header .logo-search-bar > div:first-child {
   height: 30px;
   position: static;
   max-width: 144.8px;
   min-width: 144.8px;
+}
+header .menu {
+  display: none;
+}
+@media screen and (max-width: 750px) {
+  header .logo-search-bar {
+    display: none;
+  }
+  header .menu {
+    display: unset;
+    font-size: 30px;
+    color: #213f7d;
+  }
 }/*# sourceMappingURL=Header.css.map */

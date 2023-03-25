@@ -2,9 +2,10 @@
   display: flex;
   width: fit-content;
   align-items: center;
+  position: relative;
 
   // Docs p tag
-  & > p:first-of-type {
+  .docs {
     font-size: 16px;
     font-weight: 400;
     color: #213f7d;
@@ -16,14 +17,14 @@
   }
 
   // Notification icon
-  & > img:first-of-type {
+  .notification-icon {
     width: 19.67px;
     height: 22.74px;
     margin-right: 33.16px;
   }
 
   // User Avatar
-  & > img:nth-child(3) {
+  .avatar {
     width: 48px;
     height: 48px;
     margin-right: 10px;
@@ -31,7 +32,7 @@
   }
 
   // Name of user
-  & > p:last-of-type {
+  .name {
     font-size: 16px;
     font-weight: 500;
     color: #213f7d;
@@ -42,8 +43,72 @@
   }
 
   // Chevron down icon
-  & > img:last-of-type {
+  .chevron-down {
     width: 7.34px;
     height: 4.15px;
+  }
+
+  .phone-drop-down {
+    display: none;
+  }
+
+  svg {
+    display: none;
+  }
+
+  @media screen and (max-width: 370px) {
+    & > div > div:not(:first-child) {
+      padding: 60px 30px;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    svg {
+      width: 19.66px;
+      height: 22.73px;
+      display: block;
+      color: #213f7d;
+      margin-right: 50.16px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .notification-icon,
+    .name,
+    .docs,
+    svg {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .phone-drop-down {
+      gap: 10px;
+      top: 51px;
+      right: -5px;
+      display: flex;
+      color: #545f7d;
+      font-weight: 600;
+      position: absolute;
+      padding: 20px 15px;
+      border-radius: 4px;
+      align-items: center;
+      flex-direction: column;
+      background-color: white;
+      border: 1px solid rgb(95 84 125 / 14%);
+      font-family: var(--font-work-sans-regular);
+      box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+
+      img {
+        width: 19.67px;
+        height: 22.74px;
+      }
+
+      svg {
+        display: block;
+        margin: 0;
+      }
+
+      & > p:first-of-type {
+        text-decoration: underline;
+      }
+    }
   }
 }

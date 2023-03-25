@@ -14,13 +14,14 @@
   & > div {
     gap: 25px;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(194px, 1fr)
+    );
 
     // Users Details Card
     div {
-      flex: 1;
-      max-width: 240px;
       min-height: 160px;
       border-radius: 4px;
       background: #ffffff;
@@ -49,14 +50,6 @@
         text-transform: uppercase;
         font-family: var(--font-work-sans-regular);
       }
-    }
-
-    & > div:first-child {
-      margin-left: 0;
-    }
-
-    & > div:last-child {
-      margin-left: 25px;
     }
   }
 }

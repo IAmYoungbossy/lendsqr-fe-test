@@ -40,6 +40,20 @@
 .pagination-div {
   display: flex;
   margin-top: 20px;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 850px) {
+    gap: 20px;
+    justify-content: center;
+  }
+  @media screen and (max-width: 750px) {
+    gap: 0;
+    justify-content: space-between;
+  }
+  @media screen and (max-width: 570px) {
+    gap: 20px;
+    justify-content: center;
+  }
 }

@@ -82,4 +82,9 @@ nav > div > div:last-child > div:first-child > ul > li:first-child {
 nav > div > div:last-child > div:first-child > ul > li:first-child span {
   opacity: 1;
   color: #213f7d;
+}
+@media screen and (max-width: 750px) {
+  nav {
+    display: none;
+  }
 }/*# sourceMappingURL=SideNavBar.css.map */

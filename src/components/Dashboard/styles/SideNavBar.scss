@@ -85,7 +85,11 @@ nav {
       padding-left: 30px;
       margin-bottom: 20px;
       background: #f3fcfc;
-      background: linear-gradient(to right, #39cdcc 1%, #f3fcfc 1%);
+      background: linear-gradient(
+        to right,
+        #39cdcc 1%,
+        #f3fcfc 1%
+      );
 
       font-size: 16px;
       font-weight: 600;
@@ -98,5 +102,9 @@ nav {
         color: #213f7d;
       }
     }
+  }
+
+  @media screen and (max-width: 750px) {
+    display: none;
   }
 }

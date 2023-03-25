@@ -13,12 +13,10 @@
 .users-details > div {
   gap: 25px;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(194px, 1fr));
 }
 .users-details > div div {
-  flex: 1;
-  max-width: 240px;
   min-height: 160px;
   border-radius: 4px;
   background: #ffffff;
@@ -45,10 +43,4 @@
   font-style: normal;
   text-transform: uppercase;
   font-family: var(--font-work-sans-regular);
-}
-.users-details > div > div:first-child {
-  margin-left: 0;
-}
-.users-details > div > div:last-child {
-  margin-left: 25px;
 }/*# sourceMappingURL=UsersDetails.css.map */

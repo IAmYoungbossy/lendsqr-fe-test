@@ -10,7 +10,7 @@ header {
   box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
 
   // LendSqr logo and Search bar wrapper
-  & > div:first-child {
+  .logo-search-bar {
     gap: 20px;
     width: 100%;
     display: flex;
@@ -23,6 +23,21 @@ header {
       position: static;
       max-width: 144.8px;
       min-width: 144.8px;
+    }
+  }
+
+  .menu {
+    display: none;
+  }
+
+  @media screen and (max-width: 750px) {
+    .logo-search-bar {
+      display: none;
+    }
+    .menu {
+      display: unset;
+      font-size: 30px;
+      color: #213f7d;
     }
   }
 }
