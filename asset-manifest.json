@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lendsqr-fe-test/static/css/main.9c29a98e.css",
-    "main.js": "/lendsqr-fe-test/static/js/main.a001f88d.js",
+    "main.css": "/lendsqr-fe-test/static/css/main.23ffc2e6.css",
+    "main.js": "/lendsqr-fe-test/static/js/main.1c9a86cf.js",
     "static/js/787.dabe7441.chunk.js": "/lendsqr-fe-test/static/js/787.dabe7441.chunk.js",
     "static/media/SFCompactText.otf": "/lendsqr-fe-test/static/media/SFCompactText.df30a426f04acfe1f73b.otf",
     "static/media/WorkSans-Regular.ttf": "/lendsqr-fe-test/static/media/WorkSans-Regular.ca211a55c3d9d8690c63.ttf",
@@ -12,12 +12,12 @@
     "static/media/AvenirNextLTPro-It.otf": "/lendsqr-fe-test/static/media/AvenirNextLTPro-It.3e062c6caf04ecafa42c.otf",
     "static/media/Group.svg": "/lendsqr-fe-test/static/media/Group.7370afa69c4cab86ef17947d4753c806.svg",
     "index.html": "/lendsqr-fe-test/index.html",
-    "main.9c29a98e.css.map": "/lendsqr-fe-test/static/css/main.9c29a98e.css.map",
-    "main.a001f88d.js.map": "/lendsqr-fe-test/static/js/main.a001f88d.js.map",
+    "main.23ffc2e6.css.map": "/lendsqr-fe-test/static/css/main.23ffc2e6.css.map",
+    "main.1c9a86cf.js.map": "/lendsqr-fe-test/static/js/main.1c9a86cf.js.map",
     "787.dabe7441.chunk.js.map": "/lendsqr-fe-test/static/js/787.dabe7441.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c29a98e.css",
-    "static/js/main.a001f88d.js"
+    "static/css/main.23ffc2e6.css",
+    "static/js/main.1c9a86cf.js"
   ]
 }
