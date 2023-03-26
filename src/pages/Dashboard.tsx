@@ -12,9 +12,10 @@ import { ACTION_TYPES } from "../constant/objectConstant";
 import UsersDetails from "../components/Dashboard/UsersDetails";
 
 export default function Dashboard() {
-  const { state, dispatch } = useContext(
-    AppContext
-  ) as AppContextProps;
+  const {
+    state: { allUsersData, tableRowsNumber, pages },
+    dispatch,
+  } = useContext(AppContext) as AppContextProps;
 
   useEffect(() => {
     (async () => await fetchUserData({ dispatch }))();
@@ -24,14 +25,14 @@ export default function Dashboard() {
   useEffect(() => {
     dispatch({
       type: ACTION_TYPES.TABLE_SIZE_PER_VIEW,
-      payload: splitArray(11, state.allUsersData),
+      payload: splitArray(tableRowsNumber, allUsersData),
     });
-  }, [state.allUsersData]);
+  }, [allUsersData, tableRowsNumber]);
 
   return (
     <div>
       <UsersDetails />
-      {state.pages.length > 0 && <Table />}
+      {pages.length > 0 && <Table />}
     </div>
   );
 }
