@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import "./styles/AccountInfoCard.css";
-import { views } from "../../constant/textConstant";
 import {
   AppContext,
   AppContextProps,
 } from "../../context/AppContext";
+import { UserDataType } from "../../types/types";
+import { views } from "../../constant/textConstant";
 import StarChecked from "../../assets/dashboard-assets/details-page-icon/star-checked-icon.png";
 import StartUncheck from "../../assets/dashboard-assets/details-page-icon/star-unchecked-icon.png";
-import { UserDataType } from "../../types/types";
 
 export default function AccountInfoCard() {
   return (
@@ -23,11 +23,11 @@ export default function AccountInfoCard() {
 }
 
 function Avatar() {
-  const { state } = useContext(
-    AppContext
-  ) as AppContextProps;
-  const userDetails =
-    state.singleUserDetails as UserDataType;
+  const {
+    state: { singleUserDetails },
+  } = useContext(AppContext) as AppContextProps;
+
+  const userDetails = singleUserDetails as UserDataType;
   const firstName = userDetails.profile.firstName;
   const lastName = userDetails.profile.lastName;
 

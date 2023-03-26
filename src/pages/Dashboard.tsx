@@ -1,15 +1,15 @@
 import {
+  splitArray,
+  fetchUserData,
+} from "../helpers/helpers";
+import {
   AppContext,
   AppContextProps,
 } from "../context/AppContext";
 import { useContext, useEffect } from "react";
 import Table from "../components/Dashboard/Table";
-import {
-  getListOfUsers,
-  splitArray,
-} from "../helpers/helpers";
-import UsersDetails from "../components/Dashboard/UsersDetails";
 import { ACTION_TYPES } from "../constant/objectConstant";
+import UsersDetails from "../components/Dashboard/UsersDetails";
 
 export default function Dashboard() {
   const { state, dispatch } = useContext(
@@ -17,9 +17,10 @@ export default function Dashboard() {
   ) as AppContextProps;
 
   useEffect(() => {
-    (async () => await getListOfUsers(dispatch))();
+    (async () => await fetchUserData({ dispatch }))();
   }, []);
 
+  // Adds users active status
   useEffect(() => {
     dispatch({
       type: ACTION_TYPES.TABLE_SIZE_PER_VIEW,

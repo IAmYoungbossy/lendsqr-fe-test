@@ -2,13 +2,12 @@ import {
   AppContext,
   AppContextProps,
 } from "../../context/AppContext";
+import Status from "./ActiveStatus";
 import { UserDataType } from "../../types/types";
 import UserDetailsPopUp from "./UserDetailsPopUp";
 import { formatTime } from "../../helpers/helpers";
 import { useState, useContext, useEffect } from "react";
-import { ACTION_TYPES } from "../../constant/objectConstant";
 import ThreeDots from "../../assets/dashboard-assets/table-icons/3dots-details-icon.png";
-import Status from "./ActiveStatus";
 
 interface IContactRow {
   user: UserDataType;
@@ -38,14 +37,7 @@ export function ContactRow({ user }: IContactRow) {
   });
 
   return (
-    <tr
-      onClick={() =>
-        dispatch({
-          type: ACTION_TYPES.SINGLE_USER_DETAILS,
-          payload: user,
-        })
-      }
-    >
+    <tr>
       {tableData.map((td) => {
         return (
           <td key={td}>

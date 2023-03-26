@@ -7,7 +7,16 @@ const url =
 // Gets all users from an API
 export default async function getUsersData() {
   const users = await fetch(url);
-  const allUserData =
+  const allUsersData =
     (await users.json()) as UserDataType[];
-  return { allUserData };
+  return { allUsersData };
+}
+
+export async function getSingleUserData(id: string) {
+  const users = await fetch(
+    `https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/${id}`
+  );
+  const singleUserData =
+    (await users.json()) as UserDataType;
+  return { singleUserData };
 }

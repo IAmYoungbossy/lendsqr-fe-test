@@ -1,34 +1,61 @@
 import {
+  IActionType,
+  AppStateType,
+  UserDataType,
+} from "../types/types";
+import getUsersData, {
+  getSingleUserData,
+} from "../api/fetchUserData";
+import {
   STATUS_OBJ,
   ACTION_TYPES,
 } from "../constant/objectConstant";
 import saveToLS, {
   getUsersFromLS,
 } from "../localStorage/localStorage";
-import {
-  IActionType,
-  AppStateType,
-  UserDataType,
-} from "../types/types";
-import getUsersData from "../api/fetchUserData";
 
-export const getListOfUsers = async (
-  dispatch: React.Dispatch<IActionType>
-) => {
+interface IfetchUserData {
+  id?: string;
+  dispatch: React.Dispatch<IActionType>;
+}
+
+export const fetchUserData = async ({
+  id,
+  dispatch,
+}: IfetchUserData) => {
   // Gets Data from mock API.
-  const { allUserData } = await getUsersData();
+  const { allUsersData } = await getUsersData();
 
   // Saves "allUserData" to LocalStorage if null.
-  saveToLS(allUserData);
+  saveToLS({ fileName: "allUsersData", allUsersData });
 
   // Retrievs saved data from LocalStorage for use.
-  const users = getUsersFromLS() as UserDataType[];
+  const users = getUsersFromLS(
+    "allUsersData"
+  ) as UserDataType[];
 
   // Saves to ReactJs's state for updating UI.
-  dispatch({
-    type: ACTION_TYPES.ALL_USERS_DATA,
-    payload: users,
-  });
+  if (!id) {
+    dispatch({
+      type: ACTION_TYPES.ALL_USERS_DATA,
+      payload: users,
+    });
+  } else if (id) {
+    // Awaits user data
+    const { singleUserData } = await getSingleUserData(id);
+
+    // Saves to LocalStorage if it doesn't already exist
+    saveToLS({ fileName: id, singleUser: singleUserData });
+
+    // Retrieves from LocalStorage
+    const user = getUsersFromLS(id) as UserDataType[];
+
+    // Saves to ReactJs's state for updating UI
+    dispatch({
+      type: ACTION_TYPES.SINGLE_USER_DETAILS,
+      payload: user,
+    });
+  }
 };
 
 /********************************************************
