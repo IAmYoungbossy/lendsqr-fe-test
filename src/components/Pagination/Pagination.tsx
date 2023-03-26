@@ -14,6 +14,38 @@ import RowsPerView from "./RowsPerView";
 import { BiChevronLeft } from "react-icons/bi";
 import { BiChevronRight } from "react-icons/bi";
 import { useEffect, useState, useContext } from "react";
+import { ACTION_TYPES } from "../../constant/objectConstant";
+
+interface PrevColorProps {
+  currentPage: number;
+}
+interface OpacityProps extends PrevColorProps {
+  item: number | string;
+}
+interface NextColorProps extends PrevColorProps {
+  numberOfPages: number;
+}
+
+const prevColor = ({ currentPage }: PrevColorProps) =>
+  currentPage + 1 === 1 ? "0.4" : "1";
+
+const nextColor = ({
+  numberOfPages,
+  currentPage,
+}: NextColorProps) =>
+  currentPage + 1 === numberOfPages ? "0.4" : "1";
+
+const opacity = ({ item, currentPage }: OpacityProps) =>
+  currentPage + 1 === item ? "1" : "0.5";
+
+const currentPageOpacity = ({
+  item,
+  currentPage,
+}: OpacityProps) => {
+  return {
+    opacity: opacity({ currentPage, item }),
+  };
+};
 
 export default function Pagination() {
   const {
@@ -62,11 +94,29 @@ export default function Pagination() {
             currentPage,
           })}
         >
-          <BiChevronLeft />
+          <BiChevronLeft
+            style={{ opacity: prevColor({ currentPage }) }}
+          />
         </div>
         <ul>
           {displayPages.map((item, index) => (
-            <li key={`${item} ${index}`}>{item}</li>
+            <li
+              style={currentPageOpacity({
+                item,
+                currentPage,
+              })}
+              onClick={() => {
+                if (typeof item === "number") {
+                  dispatch({
+                    type: ACTION_TYPES.PAGE_NUMBER,
+                    payload: +item - 1,
+                  });
+                }
+              }}
+              key={`${item} ${index}`}
+            >
+              {item}
+            </li>
           ))}
         </ul>
         {/* The next page button */}
@@ -77,7 +127,14 @@ export default function Pagination() {
             dispatch,
           })}
         >
-          <BiChevronRight />
+          <BiChevronRight
+            style={{
+              opacity: nextColor({
+                currentPage,
+                numberOfPages,
+              }),
+            }}
+          />
         </div>
       </div>
     </div>

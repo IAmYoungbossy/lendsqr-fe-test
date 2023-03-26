@@ -6,7 +6,8 @@
 .pagination svg {
   width: 20px;
   height: 20px;
-  color: rgba(33, 63, 125, 0.5490196078);
+  stroke-width: 1;
+  color: rgb(33, 63, 125);
 }
 .pagination div {
   width: 24px;
@@ -25,7 +26,8 @@
 .pagination li {
   opacity: 0.6;
   font-size: 16px;
-  font-weight: 400;
+  cursor: pointer;
+  font-weight: 600;
   list-style: none;
   color: #545f7d;
   line-height: 19px;

@@ -1,7 +1,9 @@
 nav {
   width: 100%;
+  height: 1284px;
   max-width: 283px;
-  min-height: 1384px;
+  overflow-y: auto;
+  overflow-x: hidden;
   background: #ffffff;
   padding: 39px 47px 0 0;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);

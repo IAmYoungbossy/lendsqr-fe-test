@@ -6,7 +6,8 @@
   svg {
     width: 20px;
     height: 20px;
-    color: #213f7d8c;
+    stroke-width: 1;
+    color: rgb(33 63 125);
   }
 
   div {
@@ -28,7 +29,8 @@
   li {
     opacity: 0.6;
     font-size: 16px;
-    font-weight: 400;
+    cursor: pointer;
+    font-weight: 600;
     list-style: none;
     color: #545f7d;
     line-height: 19px;
