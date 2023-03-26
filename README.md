@@ -59,3 +59,5 @@ The project has several components, including Logo, Button, Login Form, User Tab
 ```txt
 https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/:id
 ```
+
+[Click here](https://iamyoungbossy.github.io/lendsqr-fe-test/) for live demo.
