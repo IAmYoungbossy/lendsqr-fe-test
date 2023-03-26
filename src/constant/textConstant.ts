@@ -2,6 +2,7 @@
 import LoanMoney from "../assets/dashboard-assets/side-bar-icons/loan-money-icon.png";
 import Savings from "../assets/dashboard-assets/side-bar-icons/savings-piggy-bank.png";
 import Karma from "../assets/dashboard-assets/side-bar-icons/karma-user-times-icon.png";
+import SysMesg from "../assets/dashboard-assets/side-bar-icons/system-messages-icon.png";
 import Switch from "../assets/dashboard-assets/side-bar-icons/switch-briefcase-icon.png";
 import Dasboard from "../assets/dashboard-assets/side-bar-icons/dashboard-home-icon.png";
 import Transaction from "../assets/dashboard-assets/side-bar-icons/transaction-icon.png";
@@ -80,6 +81,7 @@ export const sideNavBar = {
         { name: "Preferrences", icon: Preferrences },
         { name: "Fees and Pricing", icon: FeesAndPricing },
         { name: "Audit Logs", icon: AuditLogs },
+        { name: "System Messages", icon: SysMesg },
       ],
     },
   ],

@@ -1,5 +1,6 @@
 import "./styles/SideNavBar.css";
 import { sideNavBar } from "../../constant/textConstant";
+import SignOut from "../../assets/dashboard-assets/side-bar-icons/sign-out-icon.png";
 
 type ListType = {
   name: string;
@@ -21,6 +22,7 @@ export default function SideNavBar() {
         <SwitchOrganisation />
         <Dashboard />
         <Categories />
+        <LogOut />
       </div>
     </nav>
   );
@@ -76,5 +78,20 @@ function categoryList(list: ListType) {
       />
       <span>{list.name}</span>
     </li>
+  );
+}
+
+function LogOut() {
+  return (
+    <div className="logout">
+      <div>
+        <img
+          src={SignOut}
+          alt="Logout Icon"
+        />{" "}
+        <p>Logout</p>
+      </div>
+      <p>v1.2.0</p>
+    </div>
   );
 }

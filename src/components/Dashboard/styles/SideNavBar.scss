@@ -3,13 +3,14 @@ nav {
   height: 1284px;
   max-width: 283px;
   overflow-y: auto;
+  position: relative;
   overflow-x: hidden;
   background: #ffffff;
   padding: 39px 47px 0 0;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
 
   // Switch Organisation style rules
-  & > div > div:first-child {
+  & > div:first-child > div:first-child {
     width: 100%;
     height: 19px;
     display: flex;
@@ -51,7 +52,7 @@ nav {
   }
 
   // Category Names
-  & > div > div:last-child {
+  & > div:first-child > div:nth-child(3) {
     & > div {
       h4 {
         font-size: 12px;
@@ -103,6 +104,32 @@ nav {
         opacity: 1;
         color: #213f7d;
       }
+    }
+  }
+
+  .logout {
+    width: 100%;
+    margin-top: 71px;
+    color: #213f7d;
+    position: absolute;
+    border-top: 1px solid;
+    font-family: var(--font-work-sans-regular);
+
+    div {
+      gap: 10px;
+      display: flex;
+      font-size: 16px;
+      margin-top: 20px;
+      font-weight: 400;
+      line-height: 19px;
+      font-style: normal;
+      padding-left: 30px;
+      align-items: center;
+    }
+
+    & > p {
+      margin-top: 40px;
+      padding-left: 30px;
     }
   }
 
