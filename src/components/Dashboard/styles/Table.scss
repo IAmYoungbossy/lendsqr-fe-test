@@ -42,7 +42,7 @@
     height: 15px;
     font-size: 14px;
     line-height: 15px;
-    padding: 20px 10px 19px 0;
+    padding: 16px 10px 16px 0;
     border-bottom: 1px solid rgba(33, 63, 125, 0.1);
 
     font-weight: 400;
@@ -69,27 +69,8 @@
   }
 
   tbody > tr:first-child > td {
-    padding-top: 37px;
-    padding-bottom: 22.35px;
-  }
-
-  tbody > tr:nth-child(2) > td {
-    padding-top: 21px;
-    padding-bottom: 21.667px;
-  }
-
-  tbody > tr:nth-child(3) > td,
-  tbody > tr:nth-child(9) > td,
-  tbody > tr:nth-child(8) > td,
-  tbody > tr:nth-child(7) > td,
-  tbody > tr:nth-child(6) > td,
-  tbody > tr:nth-child(5) > td {
-    padding-top: 23px;
-    padding-bottom: 20.667px;
-  }
-  tbody > tr:nth-child(4) > td {
-    padding-top: 23px;
-    padding-bottom: 19.667px;
+    padding-top: 30px;
+    padding-bottom: 18px;
   }
 
   tr > td:first-child {

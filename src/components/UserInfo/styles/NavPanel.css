@@ -4,13 +4,14 @@
 .nav-panel button {
   background-color: transparent;
 }
-.nav-panel > button {
+.nav-panel > a {
   gap: 14.41px;
   border: none;
   display: flex;
   outline: none;
   align-items: center;
   margin-bottom: 32px;
+  text-decoration: none;
   font-size: 16px;
   font-weight: 400;
   color: #545f7d;

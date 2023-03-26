@@ -112,5 +112,7 @@ nav .logout > p {
 @media screen and (max-width: 750px) {
   nav {
     display: none;
+    overflow-y: unset;
+    overflow-x: unset;
   }
 }/*# sourceMappingURL=SideNavBar.css.map */

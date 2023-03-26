@@ -3,6 +3,7 @@ import InputFields from "./InputFields";
 import LoginButton from "./LoginButton";
 import LendSqrLogo from "./LendSqrLogo";
 import LoginInstruction from "./LoginInstruction";
+import { Link } from "react-router-dom";
 
 export default function LoginForm() {
   return (
@@ -12,7 +13,9 @@ export default function LoginForm() {
         <LoginInstruction />
         <InputFields />
         <p>Forgot Password?</p>
-        <LoginButton>Login</LoginButton>
+        <Link to="/dashboard">
+          <LoginButton>Login</LoginButton>
+        </Link>
       </div>
     </form>
   );
