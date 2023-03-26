@@ -2,8 +2,8 @@ import "./styles/LoginForm.css";
 import InputFields from "./InputFields";
 import LoginButton from "./LoginButton";
 import LendSqrLogo from "./LendSqrLogo";
-import LoginInstruction from "./LoginInstruction";
 import { Link } from "react-router-dom";
+import LoginInstruction from "./LoginInstruction";
 
 export default function LoginForm() {
   return (
