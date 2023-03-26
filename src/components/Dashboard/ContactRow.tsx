@@ -1,12 +1,8 @@
-import {
-  AppContext,
-  AppContextProps,
-} from "../../context/AppContext";
 import Status from "./ActiveStatus";
+import { useState, useEffect } from "react";
 import { UserDataType } from "../../types/types";
 import UserDetailsPopUp from "./UserDetailsPopUp";
 import { formatTime } from "../../helpers/helpers";
-import { useState, useContext, useEffect } from "react";
 import ThreeDots from "../../assets/dashboard-assets/table-icons/3dots-details-icon.png";
 
 interface IContactRow {
@@ -15,9 +11,6 @@ interface IContactRow {
 
 export function ContactRow({ user }: IContactRow) {
   const [toggleDetails, setToggleDetails] = useState(false);
-  const { dispatch } = useContext(
-    AppContext
-  ) as AppContextProps;
 
   const tableData = [
     user.orgName,

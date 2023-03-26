@@ -58,6 +58,9 @@
   align-items: center;
   justify-content: space-between;
 }
+.table-container tr > td:last-child > div img {
+  cursor: pointer;
+}
 .table-container tbody > tr:first-child > td {
   padding-top: 30px;
   padding-bottom: 18px;
