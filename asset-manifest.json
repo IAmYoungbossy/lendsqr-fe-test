@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/lendsqr-fe-test/static/css/main.9c29a98e.css",
+    "main.js": "/lendsqr-fe-test/static/js/main.9262b80c.js",
+    "static/js/787.dabe7441.chunk.js": "/lendsqr-fe-test/static/js/787.dabe7441.chunk.js",
+    "static/media/SFCompactText.otf": "/lendsqr-fe-test/static/media/SFCompactText.df30a426f04acfe1f73b.otf",
+    "static/media/WorkSans-Regular.ttf": "/lendsqr-fe-test/static/media/WorkSans-Regular.ca211a55c3d9d8690c63.ttf",
+    "static/media/Roboto-Regular.ttf": "/lendsqr-fe-test/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
+    "static/media/pablo-sign-in.svg": "/lendsqr-fe-test/static/media/pablo-sign-in.09ab3c2d3909a795c138.svg",
+    "static/media/AvenirNextLTPro-Bold.otf": "/lendsqr-fe-test/static/media/AvenirNextLTPro-Bold.711a4eb654bf1139f123.otf",
+    "static/media/AvenirNextLTPro-Regular.otf": "/lendsqr-fe-test/static/media/AvenirNextLTPro-Regular.94f2f163d4b698242fef.otf",
+    "static/media/AvenirNextLTPro-It.otf": "/lendsqr-fe-test/static/media/AvenirNextLTPro-It.3e062c6caf04ecafa42c.otf",
+    "static/media/Group.svg": "/lendsqr-fe-test/static/media/Group.7370afa69c4cab86ef17947d4753c806.svg",
+    "index.html": "/lendsqr-fe-test/index.html",
+    "main.9c29a98e.css.map": "/lendsqr-fe-test/static/css/main.9c29a98e.css.map",
+    "main.9262b80c.js.map": "/lendsqr-fe-test/static/js/main.9262b80c.js.map",
+    "787.dabe7441.chunk.js.map": "/lendsqr-fe-test/static/js/787.dabe7441.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c29a98e.css",
+    "static/js/main.9262b80c.js"
+  ]
+}
