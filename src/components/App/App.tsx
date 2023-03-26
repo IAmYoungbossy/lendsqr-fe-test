@@ -14,7 +14,7 @@ import Dashboard from "../../pages/Dashboard";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route
-      path="/lendsqr-fe-test"
+      path="/"
       element={<HomeLayout />}
     >
       <Route
@@ -22,7 +22,7 @@ const router = createBrowserRouter(
         element={<LoginPage />}
       />
       <Route
-        path="/dashboard"
+        path="dashboard"
         element={<DashboardLayout />}
       >
         <Route
@@ -30,12 +30,13 @@ const router = createBrowserRouter(
           element={<Dashboard />}
         />
         <Route
-          path="/user/:id"
+          path="user/:id"
           element={<UserPage />}
         />
       </Route>
     </Route>
-  )
+  ),
+  { basename: "/lendsqr-fe-test" }
 );
 
 const App = () => (
